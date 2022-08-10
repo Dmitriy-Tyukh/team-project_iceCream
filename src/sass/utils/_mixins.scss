@@ -1,0 +1,26 @@
+// flex-box (display , justify-content, align-items)
+// @mixin flex-settings(flex, center, center) --- variant
+
+@mixin flex-settings($display, $justify-content, $align-items) {
+  display: $display;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+// break points
+
+@mixin mobile {
+    @media screen and (min-width:320px) {
+            @content;
+    }
+}
+@mixin  tablet {
+        @media screen and (min-width:768px) {
+            @content;
+    }
+}
+@mixin desktop {
+        @media screen and (min-width:1200px) {
+            @content;
+    }
+}

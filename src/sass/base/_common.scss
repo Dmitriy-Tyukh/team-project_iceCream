@@ -1,1 +1,19 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+
+// body
+
+body {
+  font-family: ;
+  font-size: ;
+  line-height: ;
+  letter-spacing: ;
+  background: ;
+  color: ;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+body.menu-open {
+    overflow: hidden;
+}
