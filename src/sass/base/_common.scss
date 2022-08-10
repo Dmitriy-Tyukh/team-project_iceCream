@@ -2,61 +2,11 @@
 
 @import '~node_modules/modern-normalize/modern-normalize.css';
 
-// Reset
-
-html {
-  box-sizing: border-box;
-}
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
-}
-//  Стили для обнуления верхних отступов у элементов 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin-top: 0;
-}
-// Класс для обнуления базовых свойств у списков (ul)
-.list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-// Класс для обнуления базовых свойств у ссылок
-.link {
-  text-decoration: none;
-  color: inherit;
-}
-// link decoration
-a {
-  text-decoration: none;
-  font-style: normal;
-}
-li {
-  list-style: none;
-}
-// Свойства для корректного отображения картинок
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-// Свойства для обнуления курсива у address
-address {
-  font-style: normal;
-}
-
-
 // body
 
 body {
   font-family:'DM Sans', sans-serif;
+  font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.76;

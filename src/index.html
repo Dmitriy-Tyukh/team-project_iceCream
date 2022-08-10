@@ -16,7 +16,7 @@
     <title>Ice Cream</title>
 
     <!-- style -->
-    <link rel="stylesheet" href="../css/main.min.css" />
+    <link rel="stylesheet" href="./sass/index.scss" />
 
   </head>
 
@@ -24,10 +24,19 @@
 
 <!-- ❗️❗️❗️ Add partials like so for every page -->
     <include src="./partials/header.html"></include>
-    <include src="./partials/main.html"> </include>
+    <main>
+    <include src="./partials/hero.html"></include>
+    <include src="./partials/products.html"></include>
+    <include src="./partials/about.html"></include>
+    <include src="./partials/advantages.html"></include>
+    <include src="./partials/gallery.html"></include>
+    <include src="./partials/reviews.html"></include>
+    <include src="./partials/contacts.html"></include>
+    </main>
     <include src="./partials/footer.html"></include>
 
     <!---❗️❗️❗️ Add all scripts js in main file-index.js --->
+    
 <script type="module" src="./index.js"></script>
 
   </body>
