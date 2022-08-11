@@ -1,3 +1,3 @@
-// import './js/mobile-menu';
-// import './js/modal';
+import './js/mobile-menu-scrolllock';
+import './js/modal';
 import './js/simplelightbox';
