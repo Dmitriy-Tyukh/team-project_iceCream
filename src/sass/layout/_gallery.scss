@@ -77,7 +77,8 @@
   border-radius: 8px;
 
   z-index: 0;
-  transform: scale(1);
+  //   transform: scale(1);
+  transform: scale3d(1, 1, 1);
 
   @include tablet {
     border-radius: 20px;
@@ -88,7 +89,8 @@
   &:hover,
   &:focus {
     z-index: 1;
-    transform: scale(1.2);
+    transform: scale3d(1.2, 1.2, 1);
+    // transform: scale(1.2);
     box-shadow: 0 0 8px rgb(146, 146, 146);
   }
 }
