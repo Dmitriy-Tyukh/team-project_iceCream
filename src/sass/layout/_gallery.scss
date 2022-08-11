@@ -1,0 +1,168 @@
+@import '~node_modules/simplelightbox/dist/simple-lightbox.min.css';
+
+.gallery {
+  padding-top: 0;
+  padding-bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    var(--bg-footer) 32px,
+    var(--body-bg-color) 32px
+  );
+
+  @include tablet {
+    padding-top: 0;
+    padding-bottom: 0;
+    background: linear-gradient(
+      to bottom,
+      var(--bg-footer) 193px,
+      var(--body-bg-color) 193px
+    );
+  }
+  @include desktop {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: linear-gradient(
+      to bottom,
+      var(--bg-footer) 157px,
+      var(--body-bg-color) 157px
+    );
+  }
+}
+
+.gallery__container {
+  padding: 0;
+}
+
+.gallery__grid {
+  padding: 0;
+  gap: 2.5;
+  max-width: 320px;
+  height: 136px;
+  margin: 0 auto;
+
+  @include tablet {
+    gap: 4;
+
+    max-width: 768px;
+    height: 327px;
+  }
+
+  @include desktop {
+    gap: 8;
+
+    max-width: 1013px;
+    height: 430px;
+  }
+}
+
+.grid {
+  display: grid;
+
+  //   grid-template-columns: repeat(7, 1fr);
+  //   grid-template-rows: repeat(12, 0.25fr);
+
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(36, 0.08333fr);
+}
+
+/* ---- grid-item ---- */
+
+.grid__item {
+  list-style: none;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+  border-radius: 8px;
+
+  z-index: 0;
+  transform: scale(1);
+
+  @include tablet {
+    border-radius: 20px;
+  }
+
+  @include projTransitions('transform, box-shadow');
+
+  &:hover,
+  &:focus {
+    z-index: 1;
+    transform: scale(1.2);
+    box-shadow: 0 0 8px rgb(146, 146, 146);
+  }
+}
+
+.grid__item-num1 {
+  grid-column: 1 / 2;
+  grid-row: 13 / 25;
+}
+
+.grid__item-num2 {
+  grid-column: 2 / 3;
+  grid-row: 9 / 21;
+}
+
+.grid__item-num3 {
+  grid-column: 2 / 3;
+  grid-row: 21 / 33;
+}
+
+.grid__item-num4 {
+  grid-column: 3 / 5;
+  grid-row: 1 / 25;
+}
+
+.grid__item-num5 {
+  grid-column: 3 / 4;
+  grid-row: 25 / 37;
+}
+
+.grid__item-num6 {
+  grid-column: 5 / 6;
+  grid-row: 10 / 22;
+}
+
+.grid__item-num7 {
+  grid-column: 5 / 6;
+  grid-row: 22 / 34;
+}
+
+.grid__item-num8 {
+  grid-column: 6 / 7;
+  grid-row: 6 / 18;
+}
+
+.grid__item-num9 {
+  grid-column: 6 / 7;
+  grid-row: 18 / 30;
+}
+
+.grid__item-num10 {
+  grid-column: 7 / 8;
+  grid-row: 14 / 26;
+}
+
+.grid__image {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+// simplelightbox styles
+.sl-image {
+  border-radius: 20px;
+  overflow: hidden;
+}
+.sl-wrapper .sl-image .sl-caption {
+  padding: 7px;
+  font-size: 0.8rem;
+  text-align: center;
+  background-color: var(--secondary-accent-color);
+
+  @include tablet {
+    padding: 10px;
+    font-size: 1rem;
+  }
+}
