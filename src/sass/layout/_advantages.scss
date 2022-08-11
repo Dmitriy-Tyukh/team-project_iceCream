@@ -1,0 +1,47 @@
+.advantages-section {
+ padding-top: 40px;
+ background-color: var(--bg-about);
+}
+
+.advantages-list {
+
+    &__item {
+
+    }
+
+    &__thumb {
+        margin-bottom: 32px;
+    }
+
+    &__icon {
+        margin-bottom: 16px;
+        fill: var(--title-text-color);
+    }
+
+    &__title {
+        display: block;
+        margin-bottom: 4px;
+
+        font-family: 'Titan One';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 1.40;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+
+        color: var(--secondary-accent-color);
+    }
+
+    &__text {
+        margin: 0;
+
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 1.70;
+    }
+
+}
+
+
+
