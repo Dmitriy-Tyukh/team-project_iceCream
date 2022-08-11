@@ -71,8 +71,6 @@
     bottom: calc(100% - #{$lineHeight}px + 4px);
     left: 0;
 
-    // background-color: #e1e1e1;
-
     background-image: url('../images/svg/customer-reviews/comma-comma.svg');
   }
 
@@ -83,8 +81,9 @@
     transparent calc(#{$lineHeight}px + 1px) /* Опеределяет размер градиента */
   );
 }
+
 @mixin projTransitions($property) {
   transition-property: $property;
   transition-duration: var(--transition-time);
-  transition-timing-function: var(--transition-function);
+  transition-timing-function: var(--timing-function);
 }
