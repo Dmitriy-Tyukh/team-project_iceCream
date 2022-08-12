@@ -1,0 +1,153 @@
+.footer {
+    background-color: var(--bg-footer);
+}
+
+.footer__container {
+    padding-bottom: 40px;
+
+    @include tablet {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+    }
+
+    @include desktop {
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 60px;
+    }
+}
+
+.footer__title {
+    font-family: Titan One;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--title-text-color);
+    margin-bottom: 40px;
+    max-width: 234px;
+
+    @include tablet {
+        font-size: 26px;
+        line-height: 1.15;
+        max-width: 340px;
+        margin-bottom: 0;
+    }
+
+    @include desktop {
+        font-size: 30px;
+        line-height: 1.13;
+        max-width: unset;
+    }
+}
+
+.footer__title--big {
+    font-size: 34px;
+    line-height: 1.15;
+    color: var(--secondary-accent-color);
+    margin-top: 16px;
+    display: block;
+    letter-spacing: 0.04em;
+
+    @include tablet {
+        font-size: 48px;
+        letter-spacing: 0.06em;
+        margin-top: 12px;
+    }
+
+    @include desktop {
+        font-size: 58px;
+        line-height: 1.14;
+        margin-top: 16px;
+    }
+}
+
+.social-list {
+    display: flex;
+    justify-content: right;
+    margin-bottom: 40px;
+}
+
+.social-list__item+.social-list__item {
+    margin-left: 30px;
+}
+
+.social-list__icon {
+    fill: currentColor;
+}
+
+.social-list__link {
+    color: #fea5bb;
+    @include projTransitions('transform, color');
+
+    &:hover,
+    &:focus {
+        color: var(--secondary-accent-color);
+    }
+}
+
+.footer__tel {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.86;
+    letter-spacing: 0.02em;
+    color: var(--body-text-color);
+    text-align: right;
+
+    @include tablet {
+        font-size: 14px;
+    }
+
+    @include desktop {
+        font-size: 16px;
+    }
+}
+
+.tel__link {
+    color: var(--secondary-accent-color);
+}
+
+.footer__info {
+    position: relative;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    @include tablet {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    @include desktop {
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+}
+
+.footer__info-text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.52;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: var(--secondary-text-color);
+
+    @media screen and (max-width: 767px) {
+        max-width: 150px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    @include tablet {
+        line-height: 1.86;
+    }
+}
+
+.footer__info::before {
+    position: absolute;
+    content: '';
+    display: block;
+    border-top: 1px solid var(--footer-border-color);
+    width: 100%;
+    top: 0;
+}
