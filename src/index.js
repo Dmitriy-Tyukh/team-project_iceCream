@@ -3,3 +3,4 @@
 import './js/simplelightbox';
 import './js/reviewsSlider';
 import './js/scroll';
+import './js/scrollTop';
