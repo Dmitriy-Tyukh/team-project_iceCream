@@ -1,0 +1,99 @@
+.hero {
+   background-color: var(--bg-product-1-color);
+
+   padding: 200px 0;
+	// margin-left: auto;
+	// margin-right: auto;
+   position: relative;
+   z-index: 5;
+}
+
+.hero__title {
+   position: relative;
+
+   font-family: 'Titan One';
+   font-weight: 400;
+   font-size: 38px;
+   line-height: 1.16;
+   letter-spacing: 0.04em;
+   text-transform: uppercase;
+
+   color: #FFFFFF;
+
+   z-index: 15;
+   
+}
+.hero__passion {
+   color: var(--btn-text-color);
+
+   margin-bottom: 20px;
+}
+
+.test {
+   color: var(--primary-text-color);
+}
+
+.btn__primary {
+      @extend %button;
+   
+      position: relative;
+      z-index: 25;         
+      padding: 11px 23px;
+   
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.29;
+
+      margin-right: 8px;
+   
+      &:hover,
+      &:focus {
+         color: var(--primary-text-color);
+         background: #C7133E;
+     }
+   }
+   
+   .btn__secondary {
+      
+      @extend %button;
+      padding: 11px 23px;
+
+      position: relative;
+      z-index: 25;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.29;
+   
+      &:hover,
+      &:focus {
+         color: var(--btn-text-color);
+         background: var(--accent-btn-color);
+      }
+   }
+
+   .hero__image{
+      position: absolute;
+      top: 83px;
+   left: 36px;
+   z-index: 10;
+
+   }
+
+.hero__circle {
+   // position: absolute;
+   // top: 83px;
+   // left: 36px;
+
+   border-radius: 50%;
+   background: #FFA5BA;
+   
+
+   height: 344px;
+   width: 346px;
+   // z-index: 10;
+}
+.hero__icecream {
+   position: absolute;
+   left: 50px;
+   top: 17px;
+}
