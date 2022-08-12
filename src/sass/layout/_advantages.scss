@@ -1,4 +1,4 @@
-.advantages-section {
+.advantages {
   padding-top: 0px;
   background-color: var(--bg-about);
     
@@ -9,14 +9,34 @@
 }
 
 .advantages-list {
-
     @include tablet {
-             @include flex(flex, center, flex-start) 
+             @include flex(flex, flex-start, flex-start) 
         }
 
     &__item {
+        &:first-child::before {
+        content: " ";
+        background-image: url('../images/advantages/icon-stat-milk.png');
+        @include bg-imageSettings(34px, 50px);
+        } 
+        &::before {
+        content: " ";
+        background-image: url('../images/advantages/icon-stat-apples.png');
+        @include bg-imageSettings(50px, 50px);
+        }
+        &:last-child::before {
+        content: " ";
+        background-image: url('../images/advantages/icon-stat-heart.png');
+        @include bg-imageSettings(44px, 50px);
+        } 
+
+        @media screen and (max-width: 767px) {
+        &:not(:last-child) {
+        margin-bottom: 32px;
+        }
+        }
         @include tablet {
-            &:not(:last-child) {
+        &:not(:last-child) {
             margin-right: 4px;
             }
         }
@@ -26,29 +46,10 @@
             }
         }
     }
-    &__thumb {
-        margin-bottom: 32px;
-        
-        @include tablet {
-            margin-bottom: 0;
-        }
-    }
-
-    &__icon {
-        margin-bottom: 16px;
-        fill: var(--title-text-color);
-
-        @include tablet {
-            margin-bottom: 36px;
-        }
-        @include desktop {
-            margin-bottom: 40px;
-        }
-    }
-
     &__title {
         display: block;
         margin-bottom: 4px;
+        margin-top: 16px;
 
         font-family: 'Titan One';
         font-style: normal;
@@ -59,25 +60,26 @@
         text-transform: uppercase;
 
         color: var(--secondary-accent-color);
-
+        transform-origin: center;
         transform: scale(1);
         transition: transform 250ms var(--timing-function);
 
         .advantages-list__item:hover & {
-            transform: translate( 20%, -20%) scale(1.5);
+            transform: translate(30%, -20%) scale(1.5);
         }
 
         @include tablet {
             font-size: 48px;
             line-height: 1.46;
             margin-bottom: 13px;
+            margin-top: 36px;
         }
         @include desktop {
             font-size: 58px;
             line-height: 1.38;
             margin-bottom: 16px;
+            margin-top: 40px;
         }
-
     }
 
     &__text {
@@ -98,9 +100,7 @@
             line-height: 1.76;
             letter-spacing: 0.02em;
         }
-
     }
-
 }
 
 
