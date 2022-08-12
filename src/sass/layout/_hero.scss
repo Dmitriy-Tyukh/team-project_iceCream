@@ -1,9 +1,9 @@
 .hero {
    background-color: var(--bg-product-1-color);
 
-   padding: 200px 0;
-	// margin-left: auto;
-	// margin-right: auto;
+  padding-top: 194px;
+  padding-bottom: 158px;
+	
    position: relative;
    z-index: 5;
 }
@@ -13,10 +13,12 @@
 
    font-family: 'Titan One';
    font-weight: 400;
-   font-size: 38px;
-   line-height: 1.16;
+   font-size: 26px;
+   line-height: 1.15;
    letter-spacing: 0.04em;
    text-transform: uppercase;
+
+   width: 218px;
 
    color: #FFFFFF;
 
@@ -26,6 +28,7 @@
 .hero__passion {
    color: var(--btn-text-color);
 
+   font-size: 46px;
    margin-bottom: 20px;
 }
 
@@ -38,11 +41,11 @@
    
       position: relative;
       z-index: 25;         
-      padding: 11px 23px;
+      padding: 9px 13px;
    
       font-weight: 400;
-      font-size: 14px;
-      line-height: 1.29;
+      font-size: 8px;
+      line-height: 1.25;
 
       margin-right: 8px;
    
@@ -56,13 +59,13 @@
    .btn__secondary {
       
       @extend %button;
-      padding: 11px 23px;
+      padding: 8px 10px;
 
       position: relative;
       z-index: 25;
       font-weight: 400;
-      font-size: 14px;
-      line-height: 1.29;
+      font-size: 8px;
+      line-height: 1.25;
    
       &:hover,
       &:focus {
