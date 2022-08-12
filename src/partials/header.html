@@ -1,4 +1,4 @@
-<header>
+<header class="header">
   <div class="container header__container">
     <div class="logo">
       <a href="/">
@@ -8,41 +8,69 @@
       </a>
     </div>
 
-    <nav class="menu">
+    <nav class="menu js-menu-container" id="menu-container">
       <div class="menu__wrapper">
-        <button class="nav-close-button">
-          <svg class="nav-close-icon">
-            <use href="./images/svg/sprite.svg#icon-burger"></use>
+        <button
+          class="menu__button-close js-close-menu"
+          type="button"
+          aria-expanded="false"
+          aria-controls="menu-container"
+        >
+          <svg class="menu__icon-close" aria-label="mobile menu switch">
+            <use href="./images/svg/sprite.svg#icon-close"></use>
           </svg>
         </button>
 
-        <button class="button">
+        <button
+          class="button header__button header__button--mobile buynow-button"
+          type="button"
+          data-button="buyNow"
+        >
           Buy now
-          <svg class="btn-arrow">
-            <use href="#"></use>
+          <svg class="button__icon-btn-arrow">
+            <use href="./images/svg/sprite.svg#icon-btn-arrow"></use>
           </svg>
         </button>
       </div>
 
-      <ul class="">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About us</a></li>
-        <li><a href="#">How it’s made?</a></li>
-        <li><a href="#">Our products</a></li>
-        <li><a href="#">Contact</a></li>
+      <ul class="menu-list">
+        <li class="menu-list__item">
+          <a class="menu-list__link" href="#hero">Home</a>
+        </li>
+        <li class="menu-list__item">
+          <a class="menu-list__link" href="#about">About us</a>
+        </li>
+        <li class="menu-list__item">
+          <a class="menu-list__link" href="#advantages">How it’s made?</a>
+        </li>
+        <li class="menu-list__item">
+          <a class="menu-list__link" href="#products">Our products</a>
+        </li>
+        <li class="menu-list__item">
+          <a class="menu-list__link" href="#contacts">Contact</a>
+        </li>
       </ul>
     </nav>
 
-    <button class="">
-      <svg class="">
-        <use href="#"></use>
+    <button
+      class="header__button-burger js-open-menu"
+      type="button"
+      aria-expanded="false"
+      aria-controls="menu-container"
+    >
+      <svg class="header__icon-burger" aria-label="mobile menu switch">
+        <use href="./images/svg/sprite.svg#icon-burger"></use>
       </svg>
     </button>
 
-    <button class="">
+    <button
+      class="button header__button buynow-button"
+      type="button"
+      data-button="buyNow"
+    >
       Buy now
-      <svg class="btn-arrow">
-        <use href="#"></use>
+      <svg class="button__icon-btn-arrow">
+        <use href="./images/svg/sprite.svg#icon-btn-arrow"></use>
       </svg>
     </button>
   </div>

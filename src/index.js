@@ -1,6 +1,7 @@
-// import './js/mobile-menu-scrolllock';
+import './js/mobile-menu-scrolllock';
 // import './js/modal';
 import './js/simplelightbox';
+import './js/bodyScrollLock.min';
 import './js/reviewsSlider';
 import './js/scroll';
 import './js/scrollTop';
