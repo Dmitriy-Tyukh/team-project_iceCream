@@ -3,7 +3,7 @@
     background-color:var( --bg-about);
 
     @media screen and (max-width: 767px){
-        background-image: url('../images/advantages/milk-bg@1x.png');
+        background-image: url('../images/about/milk-bg@1x.png');
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
@@ -12,13 +12,13 @@
         @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
         (min-resolution: 2dppx) {
-        background-image: url('../images/advantages/milk-bg@2x.png');
+        background-image: url('../images/about/milk-bg@2x.png');
         } 
     }
 
     @media screen and (min-width: 1200px) {
 
-        background-image: url('../images/advantages/milk-bg@1x.png');
+        background-image: url('../images/about/milk-bg@1x.png');
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
@@ -27,7 +27,7 @@
         @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
         (min-resolution: 2dppx) {
-        background-image: url('../images/advantages/milk-bg@2x.png');
+        background-image: url('../images/about/milk-bg@2x.png');
         }
     }         
 }
