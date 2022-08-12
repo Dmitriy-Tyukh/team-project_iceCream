@@ -2,3 +2,4 @@
 // import './js/modal';
 import './js/simplelightbox';
 import './js/reviewsSlider';
+import './js/scroll';
