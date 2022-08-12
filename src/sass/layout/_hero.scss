@@ -1,8 +1,8 @@
 .hero {
    background-color: var(--bg-product-1-color);
 
-  padding-top: 194px;
-  padding-bottom: 158px;
+   padding-top: 194px;
+   padding-bottom: 158px;
 	
    position: relative;
    z-index: 5;
@@ -18,18 +18,22 @@
    letter-spacing: 0.04em;
    text-transform: uppercase;
 
+   margin-bottom: 18px;
    width: 218px;
 
    color: #FFFFFF;
 
    z-index: 15;
+   padding: 0;
    
 }
+
 .hero__passion {
    color: var(--btn-text-color);
-
-   font-size: 46px;
-   margin-bottom: 20px;
+   font-weight: 400;
+   font-size: 48px;
+   line-height: 1;
+   letter-spacing: 0;
 }
 
 .test {
@@ -41,8 +45,9 @@
    
       position: relative;
       z-index: 25;         
-      padding: 9px 13px;
+      padding: 7px 13px;
    
+      vertical-align: middle;
       font-weight: 400;
       font-size: 8px;
       line-height: 1.25;
@@ -59,8 +64,9 @@
    .btn__secondary {
       
       @extend %button;
-      padding: 8px 10px;
+      padding: 7px 13px;
 
+      vertical-align: middle;
       position: relative;
       z-index: 25;
       font-weight: 400;
@@ -97,6 +103,6 @@
 }
 .hero__icecream {
    position: absolute;
-   left: 50px;
-   top: 17px;
+   top: 9px;
+   left: 81px;
 }
