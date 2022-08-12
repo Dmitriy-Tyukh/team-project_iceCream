@@ -24,13 +24,11 @@
   --primary-bg-hero: #ffb8ca;
   --secondary-bg-hero: #ffa5ba;
   --mobile-menu-bg: #e17992;
+  --testomonials-bg-color: #fafafa;
 
   // borders
   --footer-border-color: #e1e1e1;
   --mobile-menu-border: #e18298;
-
-  //  timing function
-  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   // transitions
   --transition-time: 0.3s;
@@ -38,4 +36,5 @@
 
   //icon
   --footer-icon-color: #fea5bb;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }

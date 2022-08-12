@@ -1,0 +1,313 @@
+.products {
+    &__article {
+        font-family: 'Titan One';
+        text-align: center;
+        text-transform: uppercase;
+
+        color: var(--title-text-color);
+    }
+
+    &__title {
+        font-family: 'Titan One';
+        text-align: center;
+        text-transform: uppercase;
+
+        color: var(--secondary-accent-color);
+        margin: 0;
+    }
+
+    &__list {
+       margin: 0;
+        padding: 0;
+    }
+
+    &__item {
+        position: relative;
+        border-radius: 24px;
+        
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        &:nth-child(1) {
+            background-color: var(--bg-product-1-color);
+        }
+        &:nth-child(2) {
+            background-color: var(--bg-product-2-color);
+        }
+        &:nth-child(3) {
+            background-color: var(--bg-product-3-color);
+        }
+    }
+
+    &__item-title {
+        font-family: 'Titan One';
+        font-weight: 400;
+        text-align: center;
+        text-transform: uppercase;
+        color: var(--primary-text-color);
+
+        margin-bottom: 70px;
+    }
+
+    &__item-description {
+        font-weight: 700;
+        text-align: center;
+        color: var(--primary-text-color);
+    }
+
+    &__item-info-btn {
+        display: block;
+        margin: 0 auto;
+    
+        background-color: var(--body-bg-color);
+        height: 40px;
+        width: 40px;
+    
+        border-radius: 50%;
+        border: none;
+        }
+
+    &__item-icon {
+        width: 10px;
+        height: 10px;
+
+        fill: var(--secondary-accent-color);
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .products {
+        &__article {
+            font-size: 18px;
+            line-height: 1.17;
+
+            margin-bottom: 15px;
+        }
+
+        &__title {
+            font-size: 34px;
+            line-height: 39px;
+        }
+
+        &__item {
+            padding-top: 160px;
+            padding-bottom: 40px;
+            margin-top: 148px;
+
+            &::before {
+                width: 280px;
+                height: 280px;
+                transform: translateY(-50%);
+            }
+
+            &:nth-child(1) {
+                &::before {
+                    background-image: url(../images/products/mobile/ic-product1@1x.png);
+                    background-size: cover;
+                    @media (min-resolution: 2dppx) {
+                    background-image: url(../images/products/mobile/ic-product1@2x.png);
+                    }
+                }
+            }
+            &:nth-child(2) {
+                &::before {
+                    background: url(../images/products/mobile/ic-product2@1x.png);
+                    background-size: cover;
+                @media (min-resolution: 2dppx) {
+                    background-image: url(../images/products/mobile/ic-product2@2x.png);
+                    }
+                }
+            }
+        &:nth-child(3) {
+            &::before {
+                    background: url(../images/products/mobile/ic-product3@1x.png);
+                    background-size: cover;
+                @media (min-resolution: 2dppx) {
+                    background-image: url(../images/products/mobile/ic-product3@2x.png);
+                }
+            }
+        }
+    }
+
+        &__item-title {
+            font-size: 20px;
+            line-height: 1.15;
+
+            margin-bottom: 70px;
+        }
+
+        &__item-description {
+            font-size: 14px;
+            line-height: 1.52;
+        
+            padding: 0 40px;
+            margin-bottom: 32px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .products {
+        &__article {
+            font-size: 26px;
+            line-height: 1.15;
+            margin-bottom: 18px;
+        }
+
+        &__title {
+            font-size: 48px;
+            line-height: 1.14;
+        }
+        &__list {
+            display: flex;
+            }
+        &__item {
+            margin-top: 158px;
+            margin-right: 16px;
+
+            padding: 118px 32px 40px 32px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &::before {
+                width: 224px;
+                height: 224px;
+                transform: translateY(-60%);
+            }
+
+            &:nth-child(1) {
+                &::before {
+                    background-image: url(../images/products/tablet/ic-product1@1x.png);
+                    background-size: cover;
+
+                    @media (min-resolution: 2dppx) {
+                        background-image: url(../images/products/tablet/ic-product1@2x.png);
+                    }
+                }
+            }
+           
+            &:nth-child(2) {
+                &::before {
+                    background: url(../images/products/tablet/ic-product2@1x.png);
+                    background-size: cover;
+
+                    @media (min-resolution: 2dppx) {
+                        background-image: url(../images/products/tablet/ic-product2@2x.png);
+                    }
+                }
+            }
+        
+            &:nth-child(3) {
+                &::before {
+                    background: url(../images/products/tablet/ic-product3@1x.png);
+                    background-size: cover;
+        
+                    @media (min-resolution: 2dppx) {
+                        background-image: url(../images/products/tablet/ic-product3@2x.png);
+                    }
+                }
+            }
+        }
+        &__item-title {
+            font-size: 20px;
+            line-height: 1.15;
+
+            margin-bottom: 70px;
+        }
+        &__item-description {
+            font-size: 14px;
+            line-height: 1.76;
+
+            margin-bottom: 32px;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .products {
+        &__article {
+            font-size: 30px;
+            line-height: 1.13;
+
+            margin-bottom: 16px;
+        }
+
+        &__title {
+            font-size: 58px;
+            line-height: 1.13;
+
+            letter-spacing: 0.06em;
+        }
+
+        &__list {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        &__item {
+            margin-top: 280px;
+            margin-right: 32px;
+
+            padding: 165px 65px 60px 65px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+                        &::before {
+                            width: 368px;
+                            height: 394px;
+                            transform: translateY(-65%);
+                        }
+                &:nth-child(1) {
+                    &::before {
+                        background-image: url(../images/products/desktop/ic-product1@1x.png);
+                        background-size: cover;
+        
+                        @media (min-resolution: 2dppx) {
+                            background-image: url(../images/products/desktop/ic-product1@2x.png);
+                        }
+                    }
+                }
+        
+                &:nth-child(2) {
+                    &::before {
+                        background: url(../images/products/desktop/ic-product2@1x.png);
+                        background-size: cover;
+        
+                        @media (min-resolution: 2dppx) {
+                            background-image: url(../images/products/desktop/ic-product2@2x.png);
+                        }
+                    }
+                }
+        
+                &:nth-child(3) {
+                    &::before {
+                        background: url(../images/products/desktop/ic-product3@1x.png);
+                        background-size: cover;
+        
+                        @media (min-resolution: 2dppx) {
+                            background-image: url(../images/products/desktop/ic-product3@2x.png);
+                        }
+                    }
+                }
+        }
+
+        &__item-title {
+            font-size: 20px;
+            line-height: 1.15;
+        }
+
+        &__item-description {
+            font-size: 14px;
+            line-height: 1.76;
+
+            margin-bottom: 60px;
+        }
+    }
+}
