@@ -24,12 +24,20 @@
     &__item {
         position: relative;
         border-radius: 24px;
+
+        transition: transform var(--transition-time) var(--timing-function), box-shadow var(--transition-time) var(--timing-function);
         
         &::before {
             content: "";
             position: absolute;
             top: 0;
             left: 0;
+        }
+
+        &:hover, &:focus {
+            transform: scale(1.1);
+
+            box-shadow: rgba(50, 50, 50, 0.75) 6px 0px 12px -7px, rgba(50, 50, 50, 0.75) -6px 0px 12px -7px;
         }
 
         &:nth-child(1) {
@@ -44,6 +52,7 @@
     }
 
     &__item-title {
+        position: relative;
         font-family: 'Titan One';
         font-weight: 400;
         text-align: center;
@@ -51,6 +60,18 @@
         color: var(--primary-text-color);
 
         margin-bottom: 70px;
+
+        &::after {
+            content: "";
+            background: url(../images/products/svg/dec-dots.svg);
+            position: absolute;
+            bottom: -40px;
+            left: 50%;
+            transform: translateY(-50%) translatex(-50%);
+
+            width: 26px;
+            height: 6px;
+        }
     }
 
     &__item-description {
@@ -59,9 +80,19 @@
         color: var(--primary-text-color);
     }
 
+    &__item-extras {
+        font-weight: 700;
+        text-align: center;
+        color: var(--primary-text-color);
+
+    }
+
+
     &__item-info-btn {
         display: block;
         margin: 0 auto;
+
+        text-align: center;
     
         background-color: var(--body-bg-color);
         height: 40px;
@@ -69,17 +100,46 @@
     
         border-radius: 50%;
         border: none;
+
+        cursor: pointer;
+
+        color: var(--btn-text-color);
+
+
+        transition: color var(--transition-time) var(--timing-function), box-shadow var(--transition-time) var(--timing-function), transform var(--transition-time) var(--timing-function);
+
+        &:hover, &:focus {
+            color: #f44a75;
+            transform: rotate(-90deg);
+            box-shadow: rgba(50, 50, 50, 0.75) 6px 0px 12px -7px, rgba(50, 50, 50, 0.75) -6px 0px 12px -7px;
+            }
         }
+        
 
     &__item-icon {
+        position: relative;
         width: 10px;
         height: 10px;
+        top: 35%;
+        transform: translateY(-50%);
 
-        fill: var(--secondary-accent-color);
+        fill: currentColor;
+    }
+
+    &__item-extras-text {
+        position: absolute;
+        bottom: 80;
+
+        border-radius: 25px;
+        text-align: center;
+
+        box-shadow: rgba(62, 57, 107, 0.3) 0px 6px 16px 0px;
+
+        background-color: var(--secondary-bg-hero);
     }
 }
 
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@include mobile {
     .products {
         &__article {
             font-size: 18px;
@@ -94,10 +154,9 @@
         }
 
         &__item {
-            padding-top: 160px;
-            padding-bottom: 40px;
             margin-top: 148px;
-
+            padding: 160px 40px 40px 40px;
+            
             &::before {
                 width: 280px;
                 height: 280px;
@@ -144,13 +203,24 @@
             font-size: 14px;
             line-height: 1.52;
         
-            padding: 0 40px;
             margin-bottom: 32px;
+        }
+
+        &__item-extras-text {
+            left: 20;
+            right: 20;
+            padding: 10px;
+        }
+
+        &__item-extras {
+
+            font-size: 14px;
+            line-height: 1.52;
         }
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@include tablet {
     .products {
         &__article {
             font-size: 26px;
@@ -226,10 +296,20 @@
 
             margin-bottom: 32px;
         }
+
+        &__item-extras {
+            max-width: 160px;
+        }
+
+        &__item-extras-text {
+            left: 20;
+            right: 20;
+            padding: 2px;
+        }
     }
 }
 
-@media screen and (min-width: 1200px) {
+@include desktop {
     .products {
         &__article {
             font-size: 30px;
@@ -308,6 +388,17 @@
             line-height: 1.76;
 
             margin-bottom: 60px;
+        }
+
+        &__item-extras {
+            max-width: 240px;
+        }
+
+        &__item-extras-text {
+            left: 20;
+            right: 20;
+            bottom: 140;
+            padding: 10px;
         }
     }
 }
