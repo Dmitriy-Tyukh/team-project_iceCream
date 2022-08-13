@@ -42,8 +42,12 @@
     text-transform: uppercase;
 
     color: var(--title-text-color);
+    transition: transform var(--transition-time) var(--timing-function);
 
-    
+    &:hover,
+    &:focus {
+        transform: scale(1.2);
+    }
 
     @media screen and (min-width: 320px) {
         font-size: 18px;
@@ -73,6 +77,14 @@
     text-transform: uppercase;
 
     color: var(--btn-text-color); 
+    transition: transform var(--transition-time) var(--timing-function), text-shadow var(--transition-time) var(--timing-function);
+
+    &:hover,
+    &:focus {
+        transform: scale(1.2);
+        text-shadow: var(--primary-bg-hero) 1px 0 10px;
+    }
+
 
     @media screen and (min-width: 320px) {
        
@@ -105,6 +117,14 @@
 }
 
 .about__img {
+
+    transition: transform var(--transition-time) var(--timing-function);
+
+    &:hover,
+    &:focus {
+        transform: rotate(5deg);
+    }
+
     @media screen and (min-width: 320px) {
         width: 280px;
         height: 279px;
@@ -245,3 +265,126 @@ color: #907E82;
     // border: 2px solid #D41443;
 }
 
+
+// Модальное окно
+
+.backdrop {
+    width: 100%;
+    height: 100%;
+   
+    left: 0px;
+    top: 0px;
+    position: fixed;
+    transition: opacity var(--transition-time) var(--timing-function), visibility 250ms var(--timing-function);
+
+}
+
+.modal {
+   
+    position: absolute;
+    // width: 100%;
+    top: 50%;
+    left: 50%;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    transition: transform var(--transition-time) var(--timing-function); 
+    background: var(--bg-about);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    @media screen and (min-width: 320px) {
+      width: 450px;
+
+    }
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+  }
+ 
+}
+
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.about__milk {
+    justify-content: center;
+    align-items: center;
+}
+
+.about__title-modal {
+    @extend .about__title;
+    font-size: 34px;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
+    margin-bottom: 32px;
+}
+
+// .about__milk-benefit {
+//     display: flex;
+//     justify-content: center;
+    
+// }
+
+.about__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    justify-content: center;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    // padding: 0;
+}
+
+.about__item {
+    @extend  .about__story;  
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: 0px;
+    width: calc((100% - 4 * 15px) / 2);
+}
+
+.close-btn {
+    position: absolute;
+  
+    width: 30px;
+    height: 30px;
+    top: 8px;
+    right: 8px;
+  
+    background: var(--white-color);
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  
+    transition: fill var(--transition-time) var(--timing-function), text-shadow var(--transition-time) var(--timing-function);
+ 
+  
+  &:hover &__icon,
+  &:focus &__icon {
+    fill: var(--title-text-color);
+  }
+  
+  &__icon {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+  
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 250ms var(--timing-function);
+    fill: var(--btn-text-color);
+  }
+  
+  &__element {
+    align-items: center;}
+  }
+
+//   .about__img-modal {
+//     max-width: 240px;
+//   }
