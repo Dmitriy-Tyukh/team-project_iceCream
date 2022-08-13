@@ -1,6 +1,6 @@
 .backdrop {
   position: fixed;
-  z-index: 2;
+  z-index: 200;
   overflow-y: auto;
 
   width: 100%;
@@ -62,8 +62,6 @@
     color: var(--secondary-accent-color);
   }
 }
-
-
 
 .modals-content {
   position: relative;
