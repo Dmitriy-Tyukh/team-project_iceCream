@@ -1,6 +1,8 @@
 :root {
   // color
 
+  --current-color: currentColor;
+
   // text
   --body-text-color: #000000;
   --primary-text-color: #ffffff;
@@ -31,4 +33,8 @@
   // transitions
   --transition-time: 0.3s;
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  // modals
+  --color-backdrop-overlay: rgba(0, 0, 0, 0.2);
+  --bg-modal: #fff5f6;
 }
