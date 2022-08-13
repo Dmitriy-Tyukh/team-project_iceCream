@@ -7,6 +7,10 @@
   height: 100%;
   padding: 15px;
 
+  @include tablet {
+    padding: 100px 30px;
+  }
+
   top: 0;
   left: 0;
 
@@ -15,11 +19,7 @@
   //   @include projTransitions((opacity, visibility));
 }
 
-.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
+
 
 .modal {
   position: relative;
@@ -27,18 +27,22 @@
   max-width: 280px;
   height: 100%;
   border-radius: 20px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 
   overflow: hidden;
 
   background-color: var(--bg-modal);
+
+  @include tablet {
+    max-width: 620px;
+  }
 }
 
 .modal__close-button {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 15px;
+  right: 15px;
   z-index: 1;
 }
 
@@ -46,7 +50,7 @@
   width: 14px;
   height: 14px;
 
-  border-radius: 50%;
+  // border-radius: 50%;
 
   outline: none;
   border: none;
@@ -60,6 +64,7 @@
   &:hover,
   &:focus {
     color: var(--secondary-accent-color);
+    background-color: transparent;
   }
 }
 
