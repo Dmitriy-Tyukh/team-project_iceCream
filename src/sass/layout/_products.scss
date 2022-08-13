@@ -1,3 +1,17 @@
+//animation
+
+@keyframes sweep {
+    0% {
+        max-height: 0;
+    }
+
+    100% {
+        max-height: 100%;
+    }
+}
+
+//main scss
+
 .products {
     &__article {
         font-family: 'Titan One';
@@ -77,6 +91,7 @@
     &__item-description {
         font-weight: 700;
         text-align: center;
+        
         color: var(--primary-text-color);
     }
 
@@ -87,6 +102,11 @@
 
     }
 
+    &__item-extras &__item-info-btn~p {
+        overflow: hidden;
+
+        transition: overflow var(--transition-time) var(--timing-function);
+    }
 
     &__item-info-btn {
         display: block;
@@ -110,7 +130,7 @@
 
         &:hover, &:focus {
             color: #f44a75;
-            transform: rotate(-90deg);
+
             box-shadow: rgba(50, 50, 50, 0.75) 6px 0px 12px -7px, rgba(50, 50, 50, 0.75) -6px 0px 12px -7px;
             }
         }
@@ -136,6 +156,18 @@
         box-shadow: rgba(62, 57, 107, 0.3) 0px 6px 16px 0px;
 
         background-color: var(--secondary-bg-hero);
+    }
+
+    //animation for details
+
+    &__item-extras[open] &__item-info-btn {
+        transform: rotate(-90deg);
+
+        box-shadow: rgba(50, 50, 50, 0.75) 6px 0px 12px -7px, rgba(50, 50, 50, 0.75) -6px 0px 12px -7px;
+    }
+    
+    &__item-extras[open] &__item-info-btn~p {
+        animation: sweep 2s var(--timing-function);
     }
 }
 
