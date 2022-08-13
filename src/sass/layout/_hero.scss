@@ -1,0 +1,108 @@
+.hero {
+   background-color: var(--bg-product-1-color);
+
+   padding-top: 194px;
+   padding-bottom: 158px;
+	
+   position: relative;
+   z-index: 5;
+}
+
+.hero__title {
+   position: relative;
+
+   font-family: 'Titan One';
+   font-weight: 400;
+   font-size: 26px;
+   line-height: 1.15;
+   letter-spacing: 0.04em;
+   text-transform: uppercase;
+
+   margin-bottom: 18px;
+   width: 218px;
+
+   color: #FFFFFF;
+
+   z-index: 15;
+   padding: 0;
+   
+}
+
+.hero__passion {
+   color: var(--btn-text-color);
+   font-weight: 400;
+   font-size: 48px;
+   line-height: 1;
+   letter-spacing: 0;
+}
+
+.test {
+   color: var(--primary-text-color);
+}
+
+.btn__primary {
+      @extend %button;
+   
+      position: relative;
+      z-index: 25;         
+      padding: 7px 13px;
+   
+      vertical-align: middle;
+      font-weight: 400;
+      font-size: 8px;
+      line-height: 1.25;
+
+      margin-right: 8px;
+   
+      &:hover,
+      &:focus {
+         color: var(--primary-text-color);
+         background: #C7133E;
+     }
+   }
+   
+   .btn__secondary {
+      
+      @extend %button;
+      padding: 7px 13px;
+
+      vertical-align: middle;
+      position: relative;
+      z-index: 25;
+      font-weight: 400;
+      font-size: 8px;
+      line-height: 1.25;
+   
+      &:hover,
+      &:focus {
+         color: var(--btn-text-color);
+         background: var(--accent-btn-color);
+      }
+   }
+
+   .hero__image{
+      position: absolute;
+      top: 83px;
+   left: 36px;
+   z-index: 10;
+
+   }
+
+.hero__circle {
+   // position: absolute;
+   // top: 83px;
+   // left: 36px;
+
+   border-radius: 50%;
+   background: #FFA5BA;
+   
+
+   height: 344px;
+   width: 346px;
+   // z-index: 10;
+}
+.hero__icecream {
+   position: absolute;
+   top: 9px;
+   left: 81px;
+}
