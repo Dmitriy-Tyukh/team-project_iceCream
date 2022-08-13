@@ -1,36 +1,39 @@
 <header class="header">
   <div class="container header__container">
-    <div class="logo">
-      <a href="/">
-        <svg class="logo__icon">
-          <use href="./images/svg/sprite.svg#logo"></use>
-        </svg>
-      </a>
-    </div>
+    <!-- <div class="logo"> -->
+    <a class="logo" href="/">
+      <svg class="logo__icon">
+        <use href="./images/svg/sprite.svg#logo"></use>
+      </svg>
+    </a>
+    <!-- </div> -->
 
     <nav class="menu js-menu-container" id="menu-container">
-      <div class="menu__wrapper">
-        <button
-          class="menu__button-close js-close-menu"
-          type="button"
-          aria-expanded="false"
-          aria-controls="menu-container"
-        >
-          <svg class="menu__icon-close" aria-label="mobile menu switch">
-            <use href="./images/svg/sprite.svg#icon-close"></use>
-          </svg>
-        </button>
-
-        <button
-          class="button header__button header__button--mobile buynow-button"
-          type="button"
-          data-button="buyNow"
-        >
-          Buy now
-          <svg class="button__icon-btn-arrow">
-            <use href="./images/svg/sprite.svg#icon-btn-arrow"></use>
-          </svg>
-        </button>
+      <div class="menu__btn-wrapper">
+        <div class="menu__wrapper-inner">
+          <!-- кнопка закрыть мобильное меню -->
+          <button
+            class="menu__button-close js-close-menu"
+            type="button"
+            aria-expanded="false"
+            aria-controls="menu-container"
+          >
+            <svg class="menu__icon-close" aria-label="mobile menu switch">
+              <use href="./images/svg/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+          <!-- кнопка купить мобильная -->
+          <button
+            class="button header__button header__button--mobile buynow-button"
+            type="button"
+            data-button="buyNow"
+          >
+            Buy now
+            <svg class="button__icon-btn-arrow">
+              <use href="./images/svg/sprite.svg#icon-btn-arrow"></use>
+            </svg>
+          </button>
+        </div>
       </div>
 
       <ul class="menu-list">
@@ -51,7 +54,7 @@
         </li>
       </ul>
     </nav>
-
+    <!-- кнопка открытия меню -->
     <button
       class="header__button-burger js-open-menu"
       type="button"
@@ -62,7 +65,7 @@
         <use href="./images/svg/sprite.svg#icon-burger"></use>
       </svg>
     </button>
-
+    <!-- кнопка купить на десктоп -->
     <button
       class="button header__button buynow-button"
       type="button"

@@ -8,6 +8,16 @@
     position: relative;
     display: flex;
     align-items: center;
+    padding-top: 8px;
+
+    @media screen and (min-width: 768px) {
+      padding-top: 32px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      justify-content: space-between;
+      padding-top: 37px;
+    }
   }
 
   &__button {
@@ -21,9 +31,12 @@
     }
 
     &--mobile {
-      min-width: 186px;
+      display: inline-block;
+      min-width: 209px;
       min-height: 44px;
-      margin: 0 auto;
+      @media screen and (min-width: 768px) {
+        min-width: 186px;
+      }
       @media screen and (min-width: 1200px) {
         display: none;
       }
@@ -32,25 +45,27 @@
 }
 
 .menu {
-  position: fixed;
-  z-index: 999;
-  top: 0;
-  right: 0;
-  width: 250px;
-  height: 100vh;
-  background-color: var(--mobile-menu-bg);
+  @media screen and (max-width: 1199px) {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: var(--mobile-menu-bg);
 
-  transform: translateX(100%);
-  transition-property: transform;
-  transition-duration: var(--transition-time);
-  transition-timing-function: var(--transition-function);
+    transform: translateX(100%);
+    transition-property: transform;
+    transition-duration: var(--transition-time);
+    transition-timing-function: var(--transition-function);
+  }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     width: 254px;
   }
   @media screen and (min-width: 1200px) {
     background-color: transparent;
-    transform: translateX(0);
+    // transform: translateX(0);
   }
 
   &.is-open {
@@ -58,40 +73,44 @@
   }
 }
 
-.menu__wrapper {
-  display: flex;
-  flex-direction: column;
-  // padding: 0 40px;
+.menu__btn-wrapper {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
+}
+
+.menu__wrapper-inner {
+  display: inline-block;
 }
 
 .menu-list {
   display: flex;
   flex-direction: column;
   align-items: start;
-  margin-top: 32px;
-  font-family: DM Sans;
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 700;
-  color: var(--body-bg-color);
+  padding: 0;
 
-  @media screen and (min-width: 768px) and (max-width: 1200px) {
-    margin-top: 18px;
-  }
   @media screen and (min-width: 1200px) {
     flex-direction: row;
     margin: 0;
-    height: 50px;
+    justify-content: center;
     align-items: center;
   }
 
   &__item {
-    width: 100%;
-    // padding-left: 21px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    border-top: 1px solid var(--mobile-menu-border);
-    border-bottom: 1px solid var(--mobile-menu-border);
+    @media screen and (max-width: 1199px) {
+      width: 100%;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      border-top: 1px solid var(--mobile-menu-border);
+      border-bottom: 1px solid var(--mobile-menu-border);
+    }
+    // @media screen and (min-width: 1200px) {
+    //   border: none;
+    // }
 
     &:hover,
     &:focus {
@@ -99,26 +118,30 @@
     }
   }
 
+  &__item:not(:last-child) {
+    @media screen and (min-width: 1200px) {
+      margin-right: 35px;
+    }
+  }
+
   &__link {
-    color: inherit;
+    padding-left: 20px;
+    color: var(--primary-text-color);
     transition-property: color;
     transition-duration: var(--transition-time);
     transition-timing-function: var(--transition-function);
+    &:hover,
+    &:focus {
+      color: var(--secondary-accent-color);
+      outline: none;
+      border: none;
+    }
   }
-  &:hover a,
-  &:focus a {
-    color: var(--secondary-accent-color);
-    outline: none;
-    border: none;
-  }
+
   @media screen and (min-width: 1200px) {
     font-size: 16px;
-    line-height: 21px;
-    border: none;
-    padding: 0;
-    &:not(:last-child) {
-      margin-right: 30px;
-    }
+    line-height: 1.31;
+    font-weight: 700;
   }
 }
 
@@ -130,13 +153,16 @@
 }
 
 .menu__button-close {
+  display: block;
   cursor: pointer;
   background: transparent;
   outline: none;
   border: none;
-  margin-bottom: 24px;
+  padding: 0;
+  // margin-top: 20px;
+  // margin-right: 20px;
   margin-left: auto;
-  margin-right: 20px;
+  margin-bottom: 25px;
 
   .menu__icon-close {
     width: 14px;
