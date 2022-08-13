@@ -1,9 +1,9 @@
 <form class="form" autocomplete="off">
-  <ul class="form__cathegory cathegory">
+  <ul class="form__cathegory cathegory list">
     <!-- Client`s info -->
     <li class="cathegory__client-info">
       <label class="form__label">
-        <span class="form__label">Name</span>
+        <span class="form__field-name">Name</span>
         <input
           class="form__input"
           name="name"
@@ -13,7 +13,7 @@
       </label>
 
       <label class="form__label">
-        <span class="form__label">Phone</span>
+        <span class="form__field-name">Phone</span>
         <input
           class="form__input"
           name="phone"
@@ -23,7 +23,7 @@
       </label>
 
       <label class="form__label">
-        <span class="form__label">E-mail</span>
+        <span class="form__field-name">E-mail</span>
         <input
           class="form__input"
           name="email"
@@ -33,7 +33,7 @@
       </label>
 
       <label class="form__label">
-        <span class="form__label">Delivery adress</span>
+        <span class="form__field-name">Delivery adress</span>
         <input
           class="form__input"
           name="adress"
@@ -42,8 +42,8 @@
         />
       </label>
 
-      <label class="form__field form__textarea">
-        <span class="form__label">Comments</span>
+      <label class="form__label">
+        <span class="form__field-name">Comments</span>
 
         <textarea
           class="form__input input-textarea"
@@ -56,7 +56,7 @@
 
     <!-- Our products -->
     <li class="cathegory__products buynow-products">
-      <ul class="buynow-products__list">
+      <ul class="buynow-products__list list">
         <li class="buynow-products__item">
           <label class="buynow-products__label">
             <span class="buynow-products__title">ice cream</span>
@@ -83,16 +83,34 @@
             </span>
           </label>
           <div class="buynow-products__image-price image-price">
-            <img
-              class="image-price__image"
-              src="./images/modals/buynow/mobile/home-pic1@1x.png"
-              alt="ice cream"
-              width="140"
-              height="150"
-            />
+            <div class="price__bg"></div>
+
+            <picture class="image-price__image">
+              <source
+                srcset="
+                  ./images/modals/buynow/tablet/home-pic1@1x.png 1x,
+                  ./images/modals/buynow/tablet/home-pic1@2x.png 2x
+                "
+                media="(min-width: 768px)"
+              />
+
+              <source
+                srcset="
+                  ./images/modals/buynow/mobile/home-pic1@1x.png 1x,
+                  ./images/modals/buynow/mobile/home-pic1@2x.png 2x
+                "
+                media="(min-width: 320px)"
+              />
+
+              <img
+                src="./images/modals/buynow/mobile/home-pic1@1x.png"
+                alt="ice cream"
+                width="140"
+              />
+            </picture>
+
             <div class="image-price__price price">
-              <div class="price__bg"></div>
-              <span class="price__cost">5</span>
+              <span class="price__cost">$5</span>
             </div>
           </div>
         </li>

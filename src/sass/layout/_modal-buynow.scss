@@ -1,0 +1,146 @@
+.cathegory__client-info {
+  margin-bottom: 20px;
+}
+
+.form__label {
+  margin-bottom: 10px;
+  display: block;
+
+  //   /* !удалить */
+  //   outline: 1px solid green;
+  //   background-color: lightblue;
+}
+
+.form__field-name,
+.form__input {
+  display: block;
+  width: 100%;
+}
+
+.form__input {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  border-radius: 13px;
+
+  border: none;
+  outline: 1px solid var(--secondary-text-color);
+
+  @include projTransitions(outline);
+
+  &:hover,
+  &:focus {
+    outline: 1px solid var(--secondary-accent-color);
+  }
+}
+
+.input-textarea {
+  resize: none;
+}
+
+.buynow-products__item {
+  position: relative;
+  width: 100%;
+  height: 230px;
+}
+
+.buynow-products__label {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  z-index: 3;
+}
+
+.buynow-products__title {
+  font-family: var(--secondary-font);
+  text-transform: uppercase;
+  @include font(30, 34, 400, 0.04);
+
+  color: var(--secondary-accent-color);
+}
+
+.buynow-products__image-price {
+  position: relative;
+  top: 45%;
+  transform: translateY(-50%);
+
+  overflow: hidden;
+}
+
+.image-price {
+  @include flex($type: flex, $align: center, $justify: space-between);
+}
+
+.image-price__image {
+  transform: translateX(-1%);
+}
+
+.price {
+  position: relative;
+}
+
+.price__bg {
+  position: absolute;
+
+  width: 100px;
+  height: 100px;
+
+  top: 27%;
+  left: 52%;
+
+  border-radius: 50%;
+  z-index: 0;
+
+  background-color: var(--secondary-bg-hero);
+
+  transform-origin: 55% 47%;
+
+  //   animation: scaling 10000ms linear 1000ms infinite;
+  animation: rotateRing 10000ms linear 1000ms infinite;
+}
+
+.price__cost {
+  position: relative;
+  width: 50%;
+
+  top: 20%;
+  right: 20%;
+
+  font-family: var(--secondary-font);
+  text-transform: uppercase;
+  @include font(58, 66, 400, 0.04);
+
+  color: var(--primary-text-color);
+}
+
+@keyframes rotateRing {
+  0% {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+
+  100% {
+    transform: rotate3d(0, 0, 1, 360deg);
+  }
+}
+
+@keyframes scaling {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.2);
+  }
+}
