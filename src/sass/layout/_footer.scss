@@ -1,5 +1,6 @@
 .footer {
     background-color: var(--bg-footer);
+    padding-bottom: 0;
 }
 
 .footer__container {
@@ -7,13 +8,11 @@
 
     @include tablet {
         display: flex;
-        align-items: start;
+        align-items: center;
         justify-content: space-between;
     }
 
     @include desktop {
-        padding-left: 40px;
-        padding-right: 40px;
         padding-bottom: 60px;
     }
 }
@@ -94,6 +93,7 @@
     letter-spacing: 0.02em;
     color: var(--body-text-color);
     text-align: right;
+    margin-bottom: 0;
 
     @include tablet {
         font-size: 14px;
@@ -111,7 +111,7 @@
 .footer__info {
     position: relative;
     padding-top: 16px;
-    padding-bottom: 16px;
+    padding-bottom: 3px;
 
     @include tablet {
         padding-top: 8px;
@@ -128,8 +128,8 @@
     font-weight: 700;
     font-size: 14px;
     line-height: 1.52;
-    letter-spacing: 0.02em;
     text-align: center;
+    margin-bottom: 0;
     color: var(--secondary-text-color);
 
     @media screen and (max-width: 767px) {
