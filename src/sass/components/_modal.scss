@@ -7,6 +7,8 @@
   height: 100%;
   padding: 15px;
 
+  @include projTransitions((opacity, visibility));
+
   @include tablet {
     padding: 100px 30px;
   }
@@ -19,11 +21,10 @@
   //   @include projTransitions((opacity, visibility));
 }
 
-
-
 .modal {
   position: relative;
   margin: 0 auto;
+
   max-width: 280px;
   height: 100%;
   border-radius: 20px;
@@ -33,6 +34,14 @@
   overflow: hidden;
 
   background-color: var(--bg-modal);
+
+  @include projTransitions(transform);
+
+  transform: translateX(0);
+
+  .backdrop.is-hidden & {
+    transform: translateX(110%);
+  }
 
   @include tablet {
     max-width: 620px;
