@@ -69,8 +69,7 @@
 }
 
 .about__title {
-    // width: 534px;
-    
+        
     font-family: 'Titan One';
     font-weight: 400;
     text-align: center;
@@ -295,6 +294,7 @@ color: #907E82;
 
     @media screen and (min-width: 320px) {
       width: 450px;
+      
 
     }
 
@@ -323,30 +323,27 @@ color: #907E82;
     margin-bottom: 32px;
 }
 
-// .about__milk-benefit {
-//     display: flex;
-//     justify-content: center;
-    
-// }
 
 .about__list {
     display: flex;
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
-    justify-content: center;
     padding-left: 15px;
     padding-right: 15px;
-
-    // padding: 0;
+    
+    justify-content: center;
+       
 }
 
 .about__item {
-    @extend  .about__story;  
-    margin-right: 15px;
-    margin-left: 15px;
-    margin-top: 0px;
-    width: calc((100% - 4 * 15px) / 2);
+    @extend  .about__story;
+    
+        margin-right: 15px;
+        margin-left: 15px;
+        margin-top: 0px;
+        width: calc((100% - 4 * 15px) / 2);
+    
 }
 
 .close-btn {
@@ -355,7 +352,7 @@ color: #907E82;
     width: 30px;
     height: 30px;
     top: 8px;
-    right: 8px;
+    // right: 8px;
   
     background: var(--white-color);
     border-radius: 50%;
@@ -363,6 +360,13 @@ color: #907E82;
   
     transition: fill var(--transition-time) var(--timing-function), text-shadow var(--transition-time) var(--timing-function);
  
+    @media screen and (min-width: 320px) {
+        right: 32px;
+    }
+
+    @media screen and (min-width: 768px) {
+        right: 8px;
+    }
   
   &:hover &__icon,
   &:focus &__icon {
@@ -385,6 +389,3 @@ color: #907E82;
     align-items: center;}
   }
 
-//   .about__img-modal {
-//     max-width: 240px;
-//   }
