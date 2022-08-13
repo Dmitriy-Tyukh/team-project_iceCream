@@ -1,33 +1,102 @@
-<h1>Buy Now!</h1>
-<p>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae alias
-  consequuntur perferendis distinctio itaque tempora omnis officia porro
-  voluptatum provident numquam placeat totam quisquam, magnam sint eius sit
-  tenetur suscipit! Harum sapiente fugiat ex officia pariatur corporis,
-  dignissimos quas doloremque possimus totam veritatis mollitia est eaque
-  aspernatur vitae animi magni velit? Itaque maxime quae, officiis alias veniam
-  accusamus necessitatibus expedita? Voluptate ratione commodi delectus, ullam
-  molestiae aperiam ea magnam reiciendis ducimus itaque ad enim veritatis hic
-  quo voluptatem. Nam similique explicabo debitis molestias tempore facere,
-  nostrum error aut iure reprehenderit? Velit voluptatem, obcaecati facere illo
-  fuga facilis quasi vitae harum expedita dolore id dolores porro sequi possimus
-  natus eum exercitationem officiis illum, fugit ut asperiores. Laudantium ea
-  magni hic eveniet? Illo explicabo veritatis tempora, nulla dicta expedita quos
-  non facilis rem quisquam! Magnam cupiditate maiores nam. Eum ipsam, enim unde
-  dolorem dolorum sed atque, reprehenderit doloribus beatae veniam laudantium
-  laborum. Cum qui voluptatum minus deserunt accusantium dolorum aliquam cumque
-  odio earum. Maiores iste perferendis deleniti quia tenetur odit voluptates et
-  modi, dolore saepe aut nemo nulla expedita. Dicta, modi soluta. Nisi quibusdam
-  repudiandae ut nihil esse ipsa nam ducimus harum minima vitae corrupti
-  accusamus error accusantium aut totam quos ex molestiae rerum earum,
-  doloremque neque voluptatum! Earum iste vel excepturi! Laudantium fuga fugit
-  quaerat nisi dolore quisquam itaque quae harum. Facilis sequi iusto
-  aspernatur, soluta eum, veritatis quas voluptates est dicta reprehenderit
-  fugit! Hic iure ullam maxime ratione commodi quia. Modi exercitationem eum,
-  assumenda numquam eius libero id reprehenderit ipsa, quaerat fugiat ipsum quos
-  veritatis. Labore veniam, commodi nesciunt consequatur sit ex nemo, iste in
-  alias nulla reiciendis, modi ipsam? Repellat aperiam ipsam in error, dolore
-  praesentium sed impedit rerum suscipit eius, nostrum hic explicabo! Voluptates
-  aperiam in, veniam nobis amet atque magni debitis temporibus omnis ipsam,
-  fugit quos vero.
-</p>
+<form class="form" autocomplete="off">
+  <ul class="form__cathegory cathegory">
+    <!-- Client`s info -->
+    <li class="cathegory__client-info">
+      <label class="form__label">
+        <span class="form__label">Name</span>
+        <input
+          class="form__input"
+          name="name"
+          type="text"
+          placeholder="John Smith"
+        />
+      </label>
+
+      <label class="form__label">
+        <span class="form__label">Phone</span>
+        <input
+          class="form__input"
+          name="phone"
+          type="phone"
+          placeholder="+11 222 1234567"
+        />
+      </label>
+
+      <label class="form__label">
+        <span class="form__label">E-mail</span>
+        <input
+          class="form__input"
+          name="email"
+          type="email"
+          placeholder="John.Smith@mail.com"
+        />
+      </label>
+
+      <label class="form__label">
+        <span class="form__label">Delivery adress</span>
+        <input
+          class="form__input"
+          name="adress"
+          type="text"
+          placeholder="New York, 13st, 123, ap. 45"
+        />
+      </label>
+
+      <label class="form__field form__textarea">
+        <span class="form__label">Comments</span>
+
+        <textarea
+          class="form__input input-textarea"
+          name="comments"
+          rows="6"
+          placeholder="Input any comments to your order"
+        ></textarea>
+      </label>
+    </li>
+
+    <!-- Our products -->
+    <li class="cathegory__products buynow-products">
+      <ul class="buynow-products__list">
+        <li class="buynow-products__item">
+          <label class="buynow-products__label">
+            <span class="buynow-products__title">ice cream</span>
+
+            <span class="buynow-products__quantity quantity">
+              <button class="quantity__decrise-btn decrise-btn">
+                <svg class="decrise-btn__svg" width="12" height="12">
+                  <use href="./images/svg/sprite.svg#icon-btn-arrow"></use>
+                </svg>
+              </button>
+              <input
+                class="quantity__input"
+                type="number"
+                name="ic-quantity"
+                min="0"
+                max="100"
+                placeholder="max 100"
+              />
+              <button class="quantity__incrise-btn incrise-btn">
+                <svg class="decrise-btn__svg" width="12" height="12">
+                  <use href="./images/svg/sprite.svg#icon-btn-arrow"></use>
+                </svg>
+              </button>
+            </span>
+          </label>
+          <div class="buynow-products__image-price image-price">
+            <img
+              class="image-price__image"
+              src="./images/modals/buynow/mobile/home-pic1@1x.png"
+              alt="ice cream"
+              width="140"
+              height="150"
+            />
+            <div class="image-price__price price">
+              <div class="price__bg"></div>
+              <span class="price__cost">5</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</form>
