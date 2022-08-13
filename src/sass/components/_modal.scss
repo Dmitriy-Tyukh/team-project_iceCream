@@ -1,0 +1,94 @@
+.backdrop {
+  position: fixed;
+  z-index: 200;
+  overflow-y: auto;
+
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+
+  @include tablet {
+    padding: 100px 30px;
+  }
+
+  top: 0;
+  left: 0;
+
+  background-color: var(--color-backdrop-overlay);
+
+  //   @include projTransitions((opacity, visibility));
+}
+
+
+
+.modal {
+  position: relative;
+  margin: 0 auto;
+  max-width: 280px;
+  height: 100%;
+  border-radius: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  overflow: hidden;
+
+  background-color: var(--bg-modal);
+
+  @include tablet {
+    max-width: 620px;
+  }
+}
+
+.modal__close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 1;
+}
+
+.close-button {
+  width: 14px;
+  height: 14px;
+
+  // border-radius: 50%;
+
+  outline: none;
+  border: none;
+
+  background-color: transparent;
+
+  color: var(--secondary-text-color);
+
+  @include projTransitions(color);
+
+  &:hover,
+  &:focus {
+    color: var(--secondary-accent-color);
+    background-color: transparent;
+  }
+}
+
+.modals-content {
+  position: relative;
+  display: block;
+
+  width: 100%;
+  height: 100%;
+}
+
+.all-modals__item {
+  position: absolute;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  overflow-y: auto;
+}
+
+.content-franchise {
+  overflow-y: auto;
+}

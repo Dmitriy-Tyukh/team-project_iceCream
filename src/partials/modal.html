@@ -1,0 +1,36 @@
+<div class="backdrop is-hidden">
+  <div class="modal">
+    <button class="button modal__close-button close-button" data-modal-close>
+      <svg class="close-button__svg" width="14" height="14">
+        <use href="./images/svg/sprite.svg#icon-close"></use>
+      </svg>
+    </button>
+    <ul class="modal__content-list modals-content">
+      <li class="all-modals__item is-hidden" data-modal="buyNow">
+        <!-- <h1>Buy Now!</h1> -->
+        <include src="./partials/modals-content/buynow-content.html"></include>
+      </li>
+
+      <li class="all-modals__item is-hidden" data-modal="readMore">
+        <!-- <h1>Read more!</h1> -->
+        <include
+          src="./partials/modals-content/readmore-content.html"
+        ></include>
+      </li>
+
+      <li class="all-modals__item is-hidden" data-modal="locations">
+        <!-- <h1>Our locations</h1> -->
+        <include
+          src="./partials/modals-content/location-content.html"
+        ></include>
+      </li>
+
+      <li class="all-modals__item is-hidden" data-modal="franchise">
+        <!-- <h1>Franchise</h1> -->
+        <include
+          src="./partials/modals-content/franchise-content.html"
+        ></include>
+      </li>
+    </ul>
+  </div>
+</div>

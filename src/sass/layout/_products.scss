@@ -1,5 +1,17 @@
 .products {
+
+    &__box-title {
+        transition: transform var(--transition-time) var(--timing-function), text-shadow var(--transition-time) var(--timing-function);
+    
+        &:hover,
+        &:focus {
+            transform: scale(1.2);
+            text-shadow: var(--primary-bg-hero) 1px 0 10px;
+        }
+    }
+
     &__article {
+        display: block;
         font-family: 'Titan One';
         text-align: center;
         text-transform: uppercase;
@@ -7,14 +19,19 @@
         color: var(--title-text-color);
     }
 
+
     &__title {
+        display: block;
         font-family: 'Titan One';
         text-align: center;
         text-transform: uppercase;
 
         color: var(--secondary-accent-color);
         margin: 0;
+
     }
+
+
 
     &__list {
        margin: 0;
@@ -77,6 +94,7 @@
     &__item-description {
         font-weight: 700;
         text-align: center;
+        
         color: var(--primary-text-color);
     }
 
@@ -86,7 +104,6 @@
         color: var(--primary-text-color);
 
     }
-
 
     &__item-info-btn {
         display: block;
@@ -110,7 +127,7 @@
 
         &:hover, &:focus {
             color: #f44a75;
-            transform: rotate(-90deg);
+
             box-shadow: rgba(50, 50, 50, 0.75) 6px 0px 12px -7px, rgba(50, 50, 50, 0.75) -6px 0px 12px -7px;
             }
         }
@@ -127,15 +144,18 @@
     }
 
     &__item-extras-text {
-        position: absolute;
-        bottom: 80;
+        margin-top: 40px;
 
         border-radius: 25px;
         text-align: center;
+    }
 
-        box-shadow: rgba(62, 57, 107, 0.3) 0px 6px 16px 0px;
+    //animation for details
 
-        background-color: var(--secondary-bg-hero);
+    &__item-extras[open] &__item-info-btn {
+        transform: rotate(90deg);
+
+        box-shadow: rgba(50, 50, 50, 0.75) 6px 0px 12px -7px, rgba(50, 50, 50, 0.75) -6px 0px 12px -7px;
     }
 }
 
