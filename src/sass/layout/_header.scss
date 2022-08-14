@@ -6,7 +6,6 @@
   right: 0;
 
   &__container {
-    // position: relative;
     display: flex;
     align-items: center;
     padding-top: 8px;
@@ -56,9 +55,9 @@
     width: 250px;
     height: 100vh;
     background-color: var(--mobile-menu-bg);
-
-    transform: translateX(100vw);
-    transition-property: transform;
+    opacity: 0;
+    transform: translateX(0);
+    transition-property: transform, opacity;
     transition-duration: var(--transition-time);
     transition-timing-function: var(--transition-function);
   }
@@ -72,6 +71,7 @@
 
   &.is-open {
     transform: translateX(-100%);
+    opacity: 1;
   }
 }
 
