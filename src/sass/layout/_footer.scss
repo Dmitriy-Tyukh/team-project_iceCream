@@ -1,6 +1,9 @@
 .footer {
     background-color: var(--bg-footer);
-    padding-bottom: 0;
+    
+    @include desktop {
+        padding-top: 60px;
+    }
 }
 
 .footer__container {
