@@ -73,7 +73,7 @@
 }
 
 .social-list__icon {
-    fill: currentColor;
+    fill: var(--current-color);
 }
 
 .social-list__link {
@@ -95,6 +95,11 @@
     text-align: right;
     margin-bottom: 0;
 
+    .tel__link:focus,
+    .tel__link:hover {
+        color: var(--title-text-color);
+    }
+
     @include tablet {
         font-size: 14px;
     }
@@ -106,6 +111,7 @@
 
 .tel__link {
     color: var(--secondary-accent-color);
+    @include projTransitions('transform, color');
 }
 
 .footer__info {
