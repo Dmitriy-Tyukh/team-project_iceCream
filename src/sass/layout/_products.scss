@@ -2,16 +2,14 @@
 
     &__box-title {
         transition: transform var(--transition-time) var(--timing-function), text-shadow var(--transition-time) var(--timing-function);
-    
-        &:hover,
-        &:focus {
-            transform: scale(1.2);
-            text-shadow: var(--primary-bg-hero) 1px 0 10px;
-        }
+    }
+
+    &:hover &__box-title {
+        transform: scale(1.2);
+        text-shadow: var(--primary-bg-hero) 10px 10px 10px;
     }
 
     &__article {
-        display: block;
         font-family: 'Titan One';
         text-align: center;
         text-transform: uppercase;
@@ -21,17 +19,13 @@
 
 
     &__title {
-        display: block;
         font-family: 'Titan One';
         text-align: center;
         text-transform: uppercase;
 
         color: var(--secondary-accent-color);
         margin: 0;
-
     }
-
-
 
     &__list {
        margin: 0;
@@ -102,7 +96,6 @@
         font-weight: 700;
         text-align: center;
         color: var(--primary-text-color);
-
     }
 
     &__item-info-btn {
@@ -144,19 +137,43 @@
     }
 
     &__item-extras-text {
+        position: absolute;
+
         margin-top: 40px;
 
         border-radius: 25px;
         text-align: center;
-    }
 
-    //animation for details
+        background-color: #f44a75;
 
-    &__item-extras[open] &__item-info-btn {
-        transform: rotate(90deg);
+        user-select: none;
 
         box-shadow: rgba(50, 50, 50, 0.75) 6px 0px 12px -7px, rgba(50, 50, 50, 0.75) -6px 0px 12px -7px;
     }
+
+    &__item-info-btn:hover, &__item-info-btn:focus {
+        transform: rotate(-90deg);
+
+        box-shadow: rgba(50, 50, 50, 0.75) 6px 0px 12px -7px, rgba(50, 50, 50, 0.75) -6px 0px 12px -7px;
+    }
+
+    &__item-extras-hover {
+        position: relative;
+
+        opacity: 0;
+        pointer-events: none;
+
+        transform: scale(0.3);
+
+
+        transition: opacity var(--transition-time) var(--timing-function), transform var(--transition-time) var(--timing-function),box-shadow var(--transition-time) var(--timing-function);
+    }
+
+    &__item-info-btn:hover~&__item-extras-hover {
+        opacity: 1;
+        transform: scale(1);
+    }
+
 }
 
 @include mobile {
@@ -227,13 +244,11 @@
         }
 
         &__item-extras-text {
-            left: 20;
-            right: 20;
-            padding: 10px;
+            bottom: 40;
+            padding: 5px;
         }
 
         &__item-extras {
-
             font-size: 14px;
             line-height: 1.52;
         }
@@ -322,9 +337,7 @@
         }
 
         &__item-extras-text {
-            left: 20;
-            right: 20;
-            padding: 2px;
+            padding: 5px;
         }
     }
 }
@@ -359,11 +372,11 @@
             &:last-child {
                 margin-right: 0;
             }
-                        &::before {
-                            width: 368px;
-                            height: 394px;
-                            transform: translateY(-65%);
-                        }
+                &::before {
+                    width: 368px;
+                    height: 394px;
+                    transform: translateY(-65%);
+                }
                 &:nth-child(1) {
                     &::before {
                         background-image: url(../images/products/desktop/ic-product1@1x.png);
@@ -415,9 +428,7 @@
         }
 
         &__item-extras-text {
-            left: 20;
-            right: 20;
-            bottom: 140;
+
             padding: 10px;
         }
     }
