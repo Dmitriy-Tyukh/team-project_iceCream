@@ -6,6 +6,11 @@
 	
    position: relative;
    z-index: 5;
+
+   @media screen and(min-width:768px) {
+      padding-top: 80px;
+      padding-bottom: 20px;
+   }
 }
 
 .hero__title {
@@ -25,6 +30,12 @@
 
    z-index: 15;
    
+   @media screen and(min-width:768px) {
+      font-size: 22px;
+   line-height: 1.14;
+   width: 162px;
+      
+   }
 }
 
 
@@ -34,6 +45,13 @@
    font-size: 48px;
    line-height: 0.9;
    letter-spacing: 0;
+
+   @media screen and(min-width:768px) {
+      font-size: 34px;
+   line-height: 1;
+   
+      
+   }
 }
 
 .test {
@@ -87,12 +105,15 @@
    left: 36px;
    z-index: 10;
 
+   @media screen and(min-width:768px) {
+      top: 43px;
+   left: 248px;
+   }
+
    }
 
 .hero__circle {
-   // position: absolute;
-   // top: 83px;
-   // left: 36px;
+   
 
    border-radius: 50%;
    background: #FFA5BA;
@@ -101,11 +122,22 @@
    height: 344px;
    width: 346px;
    // z-index: 10;
+
+   @media screen and(min-width:768px) {
+      width: 335px;
+      height: 333px;
+      
+   }
 }
 .hero__icecream {
    position: absolute;
    top: 9px;
    left: 81px;
+
+   @media screen and(min-width:768px) {
+      top: 37px;
+   left: 74px;
+   }
 }
 
 .hero__list {
@@ -113,4 +145,59 @@
    z-index: 666;
    margin: 0;
 
+}
+
+@media screen and (min-width:320px) and (max-width:767px) {
+   .hero__description,
+   .hero__girl,
+   .hero__milk,
+   .hero__number {
+      display: none;
+   }
+}
+@media screen and(min-width:768px) {
+   .hero__description {
+   font-family: 'DM Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 8px;
+line-height: 1.5;
+
+width: 114px;
+
+color: #FFFFFF;
+
+position: absolute;
+top: 287px;
+
+z-index: 300;
+left: 184px;
+
+margin-bottom: 0;
+}
+}
+
+@media screen and(min-width:768px) {
+.hero__girl {
+   position: absolute;
+   top: 265px;
+   right: 32px;
+   z-index: 100;
+}
+}
+
+@media screen and(min-width:768px) {
+   .hero__milk{
+      position: relative;
+      top: 20px;
+   }
+}
+
+@media screen and(min-width:768px) {
+   .hero__number {
+      
+position: absolute;
+right: 42px;
+top: 94px;
+   }
 }
