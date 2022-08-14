@@ -1,9 +1,10 @@
-<section class="section contacts">
+<section class="section contacts" id="contacts">
     
     <h2 class="visually-hidden">Contacts</h2>
-<div class="container contacts__container">
-    
-    <div class="contacts__card">
+<div class="container contacts__conteiner">
+
+    <ul class="contacts__card-list">
+<li class="contacts__card">
            <p class="contacts__category">CAFE</p>
 
      <div class="contacts__place">
@@ -29,9 +30,9 @@
          <a class="contacts__mail" href="mailto:noreply@envato.com">noreply@envato.com</a>
     </address>
 
-    </div>
+</li>
 
-     <div class="contacts__card">
+     <li class="contacts__card">
 <p class="contacts__category category-2">FOODTRUCK</p>
 <div class="contacts__place">
     <h3 class="contacts__city">Los Angeles</h3>
@@ -58,8 +59,8 @@
   <a class="contacts__mail" href="mailto:noreply@envato.com">noreply@envato.com</a>
 </address>
 
-    </div >
-    <div class="contacts__card">
+</li >
+    <li class="contacts__card">
 <p class="contacts__category">CAFE</p>
 <div class="contacts__place">
     <h3 class="contacts__city">New York</h3>
@@ -81,19 +82,36 @@
 </address>
 
 
-    </div>
-<div class="contacts__button">
-<button class="button contacts__button-locations" type="button">Our Locations</button>
+</li>
 
-<button type="button">Franchise
-    <svg class="button contacts__button-franchise" class="about__button-icon">
+
+    </ul>
+    
+    
+<ul class="contacts__button">
+    <li>
+        <button class="contacts__button-locations" type="button" data-button="locations" data-modal-open>Our Locations
+    <svg  class="contact__button-icon-location">
                 <use href="./images/svg/sprite.svg#icon-btn-arrow">
     
                 </use>
             </svg>
 </button>
+    </li>
+    <li>
+        <button class="contacts__button-franchise" type="button" data-button="franchise" data-modal-open>Franchise
+    <svg  class="contact__button-icon-franchise">
+                <use href="./images/svg/sprite.svg#icon-btn-arrow">
+    
+                </use>
+            </svg>
+</button>
+    </li>
 
-</div>
+    
+
+
+</ul>
 
     </div>
 
