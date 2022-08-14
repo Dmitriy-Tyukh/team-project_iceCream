@@ -1,0 +1,32 @@
+.about__milk {
+  justify-content: center;
+  align-items: center;
+}
+
+.about__title-modal {
+  @extend .about__title;
+  font-size: 34px;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+  margin-bottom: 32px;
+}
+
+.about__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  justify-content: center;
+}
+
+.about__item {
+  @extend .about__story;
+
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-top: 0px;
+  width: calc((100% - 4 * 15px) / 2);
+}
