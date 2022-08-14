@@ -17,13 +17,15 @@
   left: 0;
 
   background-color: var(--color-backdrop-overlay);
-
-  //   @include projTransitions((opacity, visibility));
 }
 
 .modal {
   position: relative;
-  margin: 0 auto;
+  // margin: 0 auto;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
 
   max-width: 280px;
   height: 100%;
@@ -37,15 +39,16 @@
 
   @include projTransitions(transform);
 
-  transform: translateX(0);
+  // transform: translateX(0);
 
   .backdrop.is-hidden & {
-    transform: translateX(110%);
+    transform: translate(110%, -50%);
   }
 
   @include tablet {
-    max-width: 620px;
-    height: 460px;
+    max-width: 650px;
+    height: 550px;
+    padding-bottom: 20px;
   }
 }
 

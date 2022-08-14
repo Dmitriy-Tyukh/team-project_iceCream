@@ -9,8 +9,8 @@
 
   flex: 0 0 auto;
 
-  width: 40px;
-  height: 40px;
+  width: 26px;
+  height: 26px;
 
   padding: 0;
   color: var(--secondary-accent-color);
@@ -24,26 +24,30 @@
 
   border-radius: 50%;
 
+  @include projTransitions('color, background-color');
+
   &:hover,
   &:focus {
     color: var(--primary-text-color);
     background-color: var(--secondary-accent-color);
   }
 
+  &:active {
+    color: var(--primary-text-color);
+    background-color: var(--title-text-color);
+  }
+
   &--rotated {
     transform: rotateZ(180deg);
   }
-
-  @include projTransitions('color, background-color');
 }
 
 .quantity__svg {
   position: absolute;
-
   transform: translateX(2px);
 }
 
 .quantity__input {
-  height: 40px;
+  // height: 40px;
   flex: 1 1 auto;
 }

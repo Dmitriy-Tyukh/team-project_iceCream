@@ -1,14 +1,60 @@
+.cathegory {
+  display: flex;
+  flex-direction: column-reverse;
+
+  @include tablet {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+
+.cathegory__products {
+  margin-bottom: 10px;
+
+  @include tablet {
+    margin-bottom: 0;
+  }
+}
+
 .cathegory__client-info {
   margin-bottom: 20px;
+  width: 100%;
+
+  @include tablet {
+    margin-bottom: 5px;
+  }
+}
+
+.client-info {
+  flex: 1 1 100%;
+  margin-left: 10px;
+}
+
+.client-info__title {
+  font-family: var(--secondary-font);
+  text-transform: uppercase;
+  @include font(30, 34, 400, 0.04);
+  text-align: center;
+
+  color: var(--secondary-accent-color);
+
+  @include tablet {
+    margin-bottom: 15px;
+  }
 }
 
 .form__label {
-  margin-bottom: 10px;
   display: block;
 
-  //   /* !удалить */
-  //   outline: 1px solid green;
-  //   background-color: lightblue;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  @include tablet {
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
 }
 
 .form__field-name,
@@ -46,6 +92,10 @@
   gap: 40px;
 
   margin-bottom: 40px;
+
+  @include tablet {
+    gap: 25px;
+  }
 }
 
 .buynow-products__item {
@@ -64,6 +114,17 @@
 
     z-index: 50;
   }
+
+  @include tablet {
+    width: 350px;
+    height: 115px;
+
+    &:after {
+      background-color: red;
+
+      display: none;
+    }
+  }
 }
 
 .buynow-products__label {
@@ -81,6 +142,17 @@
   justify-content: space-between;
 
   z-index: 3;
+
+  @include tablet {
+    width: 150px;
+    height: 100%;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    justify-content: center;
+  }
 }
 
 .buynow-products__title {
@@ -89,6 +161,12 @@
   @include font(30, 34, 400, 0.04);
 
   color: var(--secondary-accent-color);
+
+  @include tablet {
+    @include font(20, 21, 400, 0.04);
+
+    margin-bottom: 40px;
+  }
 }
 
 .buynow-products__image-price {
@@ -114,8 +192,8 @@
 .price__bg {
   position: absolute;
 
-  width: 100px;
-  height: 100px;
+  width: 95px;
+  height: 95px;
 
   top: 27%;
   left: 52%;
@@ -127,15 +205,21 @@
 
   &--icecream {
     background-color: var(--secondary-bg-hero);
-    transform-origin: 55% 47%;
+    transform-origin: 55% 48%;
   }
   &--icecoffee {
     background-color: #f0d1a5;
-    transform-origin: 55% 48%;
+    transform-origin: 59% 47%;
   }
   &--milkshakes {
     background-color: #c2e297;
     transform-origin: 55% 50;
+  }
+
+  @include tablet {
+    top: 11%;
+
+    left: 66%;
   }
 }
 
@@ -153,6 +237,19 @@
   color: var(--primary-text-color);
 }
 
+.form__footer {
+  display: flex;
+  flex-direction: column;
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 40px;
+  }
+}
+
 .form__total-price {
   @include font(18, 25, 400, 0.04);
   color: var(--secondary-text-color);
@@ -163,9 +260,15 @@
     font-weight: 700;
     color: var(--body-text-color);
   }
+
+  @include tablet {
+    flex: 1 1 30%;
+    margin: 0;
+  }
 }
 
 .order-button {
+  outline: none;
   width: 100%;
 
   &:hover,
@@ -173,5 +276,14 @@
     color: var(--primary-text-color);
 
     background-color: var(--btn-text-color);
+
+    &:active {
+      color: var(--primary-text-color);
+      background-color: var(--title-text-color);
+    }
+  }
+
+  @include tablet {
+    flex: 1 1 70%;
   }
 }

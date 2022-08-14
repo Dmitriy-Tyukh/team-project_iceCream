@@ -1,7 +1,8 @@
 <form class="form" autocomplete="off">
   <ul class="form__cathegory cathegory list">
     <!-- Client`s info -->
-    <li class="cathegory__client-info">
+    <li class="cathegory__client-info client-info">
+      <h2 class="client-info__title title">Order form</h2>
       <label class="form__label">
         <span class="form__field-name">Name</span>
         <input
@@ -9,6 +10,7 @@
           name="name"
           type="text"
           placeholder="John Smith"
+          tabindex="4"
         />
       </label>
 
@@ -19,6 +21,7 @@
           name="phone"
           type="phone"
           placeholder="+11 222 1234567"
+          tabindex="5"
         />
       </label>
 
@@ -29,6 +32,7 @@
           name="email"
           type="email"
           placeholder="John.Smith@mail.com"
+          tabindex="6"
         />
       </label>
 
@@ -39,6 +43,7 @@
           name="adress"
           type="text"
           placeholder="New York, 13st, 123, ap. 45"
+          tabindex="7"
         />
       </label>
 
@@ -50,6 +55,7 @@
           name="comments"
           rows="6"
           placeholder="Input any comments to your order"
+          tabindex="8"
         ></textarea>
       </label>
     </li>
@@ -77,10 +83,11 @@
               <input
                 class="form__input quantity__input"
                 type="number"
-                name="ic-quantity"
+                name="icecream-quantity"
                 min="0"
                 max="100"
                 placeholder="max 100"
+                tabindex="1"
               />
               <button class="quantity__button button-incrise" type="button">
                 <svg
@@ -117,7 +124,6 @@
               <img
                 src="./images/modals/buynow/mobile/home-pic1@1x.png"
                 alt="ice cream"
-                width="140"
               />
             </picture>
 
@@ -147,10 +153,11 @@
               <input
                 class="form__input quantity__input"
                 type="number"
-                name="ic-quantity"
+                name="icecoffee-quantity"
                 min="0"
                 max="100"
                 placeholder="max 100"
+                tabindex="2"
               />
               <button class="quantity__button button-incrise" type="button">
                 <svg
@@ -187,7 +194,6 @@
               <img
                 src="./images/modals/buynow/mobile/home-pic2@1x.png"
                 alt="ice cream"
-                width="126"
               />
             </picture>
 
@@ -217,10 +223,11 @@
               <input
                 class="form__input quantity__input"
                 type="number"
-                name="ic-quantity"
+                name="milkshakes-quantity"
                 min="0"
                 max="100"
                 placeholder="max 100"
+                tabindex="3"
               />
               <button class="quantity__button button-incrise" type="button">
                 <svg
@@ -257,7 +264,6 @@
               <img
                 src="./images/modals/buynow/mobile/home-pic3@1x.png"
                 alt="ice cream"
-                width="140"
               />
             </picture>
 
@@ -267,19 +273,18 @@
           </div>
         </li>
       </ul>
-
-      <p class="form__total-price">
-        Total cost:
-        <span
-          id="total-price"
-          class="form__total-price form__total-price--bolded"
-          >$264</span
-        >
-      </p>
-
-      <button class="form__button order-button button" type="button">
-        Make an order
-      </button>
     </li>
   </ul>
+  <div class="form__footer">
+    <p class="form__total-price">
+      Total cost:
+      <span id="total-price" class="form__total-price form__total-price--bolded"
+        >$264</span
+      >
+    </p>
+
+    <button class="form__button order-button button" type="button" tabindex="9">
+      Make an order
+    </button>
+  </div>
 </form>
