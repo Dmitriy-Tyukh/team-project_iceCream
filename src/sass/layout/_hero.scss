@@ -6,6 +6,7 @@
 	
    position: relative;
    z-index: 5;
+   overflow-x: hidden;
 
    @media screen and(min-width:768px) {
       padding-top: 80px;
@@ -59,7 +60,14 @@
 }
 
 .btn__primary {
-      @extend %button;
+      
+   cursor: pointer;
+
+  border-style: none;
+  border-radius: 20px;
+   align-items: center;
+
+  
    
       position: relative;
       z-index: 25;         
@@ -69,14 +77,17 @@
       font-weight: 400;
       font-size: 8px;
       line-height: 1.25;
+      color: var(--primary-text-color);
+      background: #C7133E;
 
-      // margin-right: 8px;
+      
+
       margin: 0;
-      &:hover,
-      &:focus {
-         color: var(--primary-text-color);
-         background: #C7133E;
-     }
+   //    &:hover,
+   //    &:focus {
+   //       color: var(--primary-text-color);
+   //       background: #C7133E;
+   //   }
    }
    
    .btn__secondary {
@@ -91,6 +102,8 @@
       font-weight: 400;
       font-size: 8px;
       line-height: 1.25;
+
+      transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function);
    
       &:hover,
       &:focus {
