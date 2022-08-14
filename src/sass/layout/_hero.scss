@@ -133,7 +133,7 @@
       z-index: 10;
 
       @media screen and(min-width:768px) {
-         top: 43px;
+         top: -59px;
          left: 248px;
       }
 
@@ -186,31 +186,31 @@
 }
 @media screen and(min-width:768px) {
    .hero__description {
-   font-family: 'DM Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 8px;
-line-height: 1.5;
-letter-spacing: normal;
+      font-family: 'DM Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 8px;
+      line-height: 1.5;
+      letter-spacing: normal;
 
-width: 114px;
+      width: 114px;
 
-color: #FFFFFF;
+      color: #FFFFFF;
 
-position: absolute;
-top: 287px;
+      position: absolute;
+      top: 187px;
 
-z-index: 300;
-left: 184px;
+      z-index: 300;
+      left: 184px;
 
-margin-bottom: 0;
-}
+      margin-bottom: 0;
+   }
 }
 
 @media screen and(min-width:768px) {
 .hero__girl {
    position: absolute;
-   top: 265px;
+   top: 165px;
    right: 32px;
    z-index: 100;
 }
@@ -219,7 +219,7 @@ margin-bottom: 0;
 @media screen and(min-width:768px) {
    .hero__milk{
       position: absolute;
-      top: 246px;
+      top: 146px;
    }
 }
 
@@ -228,7 +228,7 @@ margin-bottom: 0;
       
       position: absolute;
       right: 42px;
-      top: 94px;
+      top: -8px;
 
       text-align: right;
    }
@@ -300,7 +300,7 @@ margin-bottom: 0;
       color: var(--btn-text-color);
 
       position: absolute;
-      top: 342px;
+      top: 242px;
       left: 184px;
    
    }
