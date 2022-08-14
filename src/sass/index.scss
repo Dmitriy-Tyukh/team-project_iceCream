@@ -6,6 +6,7 @@
 @import './utils/visually-hiden';
 @import './utils/mixins';
 @import './utils/is-hidden';
+@import './utils/animations';
 
 // base
 @import './base/common';
@@ -17,6 +18,7 @@
 @import './components/buttons';
 @import './components/modal';
 @import './components/slide';
+@import './components/quantity';
 
 // layout
 @import './layout/header';
@@ -28,3 +30,4 @@
 @import './layout/reviews';
 @import './layout/contacts';
 @import './layout/footer';
+@import './layout/modal-buynow';

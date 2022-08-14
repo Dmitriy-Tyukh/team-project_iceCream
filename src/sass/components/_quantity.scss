@@ -1,0 +1,53 @@
+.quantity {
+  @include flex(flex, center, space-between);
+  gap: 5px;
+  width: 100%;
+}
+
+.quantity__button {
+  //   position: relative;
+
+  flex: 0 0 auto;
+
+  width: 26px;
+  height: 26px;
+
+  padding: 0;
+  color: var(--secondary-accent-color);
+
+  background-color: var(--body-bg-color);
+
+  @include flex();
+
+  border: none;
+  outline: none;
+
+  border-radius: 50%;
+
+  @include projTransitions('color, background-color');
+
+  &:hover,
+  &:focus {
+    color: var(--primary-text-color);
+    background-color: var(--secondary-accent-color);
+  }
+
+  &:active {
+    color: var(--primary-text-color);
+    background-color: var(--title-text-color);
+  }
+
+  &--rotated {
+    transform: rotateZ(180deg);
+  }
+}
+
+.quantity__svg {
+  position: absolute;
+  transform: translateX(2px);
+}
+
+.quantity__input {
+  // height: 40px;
+  flex: 1 1 auto;
+}

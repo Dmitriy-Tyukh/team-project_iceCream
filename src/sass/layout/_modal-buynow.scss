@@ -1,0 +1,289 @@
+.cathegory {
+  display: flex;
+  flex-direction: column-reverse;
+
+  @include tablet {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+
+.cathegory__products {
+  margin-bottom: 10px;
+
+  @include tablet {
+    margin-bottom: 0;
+  }
+}
+
+.cathegory__client-info {
+  margin-bottom: 20px;
+  width: 100%;
+
+  @include tablet {
+    margin-bottom: 5px;
+  }
+}
+
+.client-info {
+  flex: 1 1 100%;
+  margin-left: 10px;
+}
+
+.client-info__title {
+  font-family: var(--secondary-font);
+  text-transform: uppercase;
+  @include font(30, 34, 400, 0.04);
+  text-align: center;
+
+  color: var(--secondary-accent-color);
+
+  @include tablet {
+    margin-bottom: 15px;
+  }
+}
+
+.form__label {
+  display: block;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  @include tablet {
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.form__field-name,
+.form__input {
+  display: block;
+  width: 100%;
+}
+
+.form__input {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  border-radius: 13px;
+
+  border: none;
+  outline: 1px solid var(--secondary-text-color);
+
+  @include projTransitions(outline);
+
+  &:hover,
+  &:focus {
+    outline: 1px solid var(--secondary-accent-color);
+  }
+}
+
+.input-textarea {
+  resize: none;
+}
+
+.buynow-products__list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  margin-bottom: 40px;
+
+  @include tablet {
+    gap: 25px;
+  }
+}
+
+.buynow-products__item {
+  position: relative;
+  width: 100%;
+  height: 230px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: calc(100% + 20px);
+    left: 0;
+    background-color: #e1e1e1;
+
+    z-index: 50;
+  }
+
+  @include tablet {
+    width: 350px;
+    height: 115px;
+
+    &:after {
+      background-color: red;
+
+      display: none;
+    }
+  }
+}
+
+.buynow-products__label {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 245px;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  z-index: 3;
+
+  @include tablet {
+    width: 150px;
+    height: 100%;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    justify-content: center;
+  }
+}
+
+.buynow-products__title {
+  font-family: var(--secondary-font);
+  text-transform: uppercase;
+  @include font(30, 34, 400, 0.04);
+
+  color: var(--secondary-accent-color);
+
+  @include tablet {
+    @include font(20, 21, 400, 0.04);
+
+    margin-bottom: 40px;
+  }
+}
+
+.buynow-products__image-price {
+  position: relative;
+  top: 45%;
+  transform: translateY(-50%);
+
+  overflow: hidden;
+}
+
+.image-price {
+  @include flex($type: flex, $align: center, $justify: space-between);
+}
+
+.image-price__image {
+  transform: translateX(-1%);
+}
+
+.price {
+  position: relative;
+}
+
+.price__bg {
+  position: absolute;
+
+  width: 95px;
+  height: 95px;
+
+  top: 27%;
+  left: 52%;
+
+  border-radius: 50%;
+  z-index: 0;
+
+  animation: rotateRing 10000ms linear 1000ms infinite;
+
+  &--icecream {
+    background-color: var(--secondary-bg-hero);
+    transform-origin: 55% 48%;
+  }
+  &--icecoffee {
+    background-color: #f0d1a5;
+    transform-origin: 59% 47%;
+  }
+  &--milkshakes {
+    background-color: #c2e297;
+    transform-origin: 55% 50;
+  }
+
+  @include tablet {
+    top: 11%;
+
+    left: 66%;
+  }
+}
+
+.price__cost {
+  position: relative;
+  width: 50%;
+
+  top: 20%;
+  right: 20%;
+
+  font-family: var(--secondary-font);
+  text-transform: uppercase;
+  @include font(58, 66, 400, 0.04);
+
+  color: var(--primary-text-color);
+}
+
+.form__footer {
+  display: flex;
+  flex-direction: column;
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 40px;
+  }
+}
+
+.form__total-price {
+  @include font(18, 25, 400, 0.04);
+  color: var(--secondary-text-color);
+
+  text-align: center;
+
+  &--bolded {
+    font-weight: 700;
+    color: var(--body-text-color);
+  }
+
+  @include tablet {
+    flex: 1 1 30%;
+    margin: 0;
+  }
+}
+
+.order-button {
+  outline: none;
+  width: 100%;
+
+  &:hover,
+  &:focus {
+    color: var(--primary-text-color);
+
+    background-color: var(--btn-text-color);
+
+    &:active {
+      color: var(--primary-text-color);
+      background-color: var(--title-text-color);
+    }
+  }
+
+  @include tablet {
+    flex: 1 1 70%;
+  }
+}

@@ -1,33 +1,290 @@
-<h1>Buy Now!</h1>
-<p>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae alias
-  consequuntur perferendis distinctio itaque tempora omnis officia porro
-  voluptatum provident numquam placeat totam quisquam, magnam sint eius sit
-  tenetur suscipit! Harum sapiente fugiat ex officia pariatur corporis,
-  dignissimos quas doloremque possimus totam veritatis mollitia est eaque
-  aspernatur vitae animi magni velit? Itaque maxime quae, officiis alias veniam
-  accusamus necessitatibus expedita? Voluptate ratione commodi delectus, ullam
-  molestiae aperiam ea magnam reiciendis ducimus itaque ad enim veritatis hic
-  quo voluptatem. Nam similique explicabo debitis molestias tempore facere,
-  nostrum error aut iure reprehenderit? Velit voluptatem, obcaecati facere illo
-  fuga facilis quasi vitae harum expedita dolore id dolores porro sequi possimus
-  natus eum exercitationem officiis illum, fugit ut asperiores. Laudantium ea
-  magni hic eveniet? Illo explicabo veritatis tempora, nulla dicta expedita quos
-  non facilis rem quisquam! Magnam cupiditate maiores nam. Eum ipsam, enim unde
-  dolorem dolorum sed atque, reprehenderit doloribus beatae veniam laudantium
-  laborum. Cum qui voluptatum minus deserunt accusantium dolorum aliquam cumque
-  odio earum. Maiores iste perferendis deleniti quia tenetur odit voluptates et
-  modi, dolore saepe aut nemo nulla expedita. Dicta, modi soluta. Nisi quibusdam
-  repudiandae ut nihil esse ipsa nam ducimus harum minima vitae corrupti
-  accusamus error accusantium aut totam quos ex molestiae rerum earum,
-  doloremque neque voluptatum! Earum iste vel excepturi! Laudantium fuga fugit
-  quaerat nisi dolore quisquam itaque quae harum. Facilis sequi iusto
-  aspernatur, soluta eum, veritatis quas voluptates est dicta reprehenderit
-  fugit! Hic iure ullam maxime ratione commodi quia. Modi exercitationem eum,
-  assumenda numquam eius libero id reprehenderit ipsa, quaerat fugiat ipsum quos
-  veritatis. Labore veniam, commodi nesciunt consequatur sit ex nemo, iste in
-  alias nulla reiciendis, modi ipsam? Repellat aperiam ipsam in error, dolore
-  praesentium sed impedit rerum suscipit eius, nostrum hic explicabo! Voluptates
-  aperiam in, veniam nobis amet atque magni debitis temporibus omnis ipsam,
-  fugit quos vero.
-</p>
+<form class="form" autocomplete="off">
+  <ul class="form__cathegory cathegory list">
+    <!-- Client`s info -->
+    <li class="cathegory__client-info client-info">
+      <h2 class="client-info__title title">Order form</h2>
+      <label class="form__label">
+        <span class="form__field-name">Name</span>
+        <input
+          class="form__input"
+          name="name"
+          type="text"
+          placeholder="John Smith"
+          tabindex="4"
+        />
+      </label>
+
+      <label class="form__label">
+        <span class="form__field-name">Phone</span>
+        <input
+          class="form__input"
+          name="phone"
+          type="phone"
+          placeholder="+11 222 1234567"
+          tabindex="5"
+        />
+      </label>
+
+      <label class="form__label">
+        <span class="form__field-name">E-mail</span>
+        <input
+          class="form__input"
+          name="email"
+          type="email"
+          placeholder="John.Smith@mail.com"
+          tabindex="6"
+        />
+      </label>
+
+      <label class="form__label">
+        <span class="form__field-name">Delivery adress</span>
+        <input
+          class="form__input"
+          name="adress"
+          type="text"
+          placeholder="New York, 13st, 123, ap. 45"
+          tabindex="7"
+        />
+      </label>
+
+      <label class="form__label">
+        <span class="form__field-name">Comments</span>
+
+        <textarea
+          class="form__input input-textarea"
+          name="comments"
+          rows="6"
+          placeholder="Input any comments to your order"
+          tabindex="8"
+        ></textarea>
+      </label>
+    </li>
+
+    <!-- Our products -->
+    <li class="cathegory__products buynow-products">
+      <ul class="buynow-products__list list">
+        <li class="buynow-products__item">
+          <div class="buynow-products__label">
+            <span class="buynow-products__title">ice cream</span>
+
+            <span class="buynow-products__quantity quantity">
+              <button
+                class="quantity__button quantity__button--rotated button-decrise"
+                type="button"
+              >
+                <svg
+                  class="quantity__svg decrise-btn__svg"
+                  width="12"
+                  height="12"
+                >
+                  <use href="./images/svg/sprite.svg#icon-btn-arrow"></use>
+                </svg>
+              </button>
+              <input
+                class="form__input quantity__input"
+                type="number"
+                name="icecream-quantity"
+                min="0"
+                max="100"
+                placeholder="max 100"
+                tabindex="1"
+              />
+              <button class="quantity__button button-incrise" type="button">
+                <svg
+                  class="quantity__svg incrise-btn__svg"
+                  width="12"
+                  height="12"
+                >
+                  <use href="./images/svg/sprite.svg#icon-btn-arrow"></use>
+                </svg>
+              </button>
+            </span>
+          </div>
+
+          <div class="buynow-products__image-price image-price">
+            <div class="price__bg price__bg--icecream"></div>
+
+            <picture class="image-price__image">
+              <source
+                srcset="
+                  ./images/modals/buynow/tablet/home-pic1@1x.png 1x,
+                  ./images/modals/buynow/tablet/home-pic1@2x.png 2x
+                "
+                media="(min-width: 768px)"
+              />
+
+              <source
+                srcset="
+                  ./images/modals/buynow/mobile/home-pic1@1x.png 1x,
+                  ./images/modals/buynow/mobile/home-pic1@2x.png 2x
+                "
+                media="(min-width: 320px)"
+              />
+
+              <img
+                src="./images/modals/buynow/mobile/home-pic1@1x.png"
+                alt="ice cream"
+              />
+            </picture>
+
+            <div class="image-price__price price">
+              <span class="price__cost">$5</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="buynow-products__item">
+          <div class="buynow-products__label">
+            <span class="buynow-products__title">ice coffee</span>
+
+            <span class="buynow-products__quantity quantity">
+              <button
+                class="quantity__button quantity__button--rotated button-decrise"
+                type="button"
+              >
+                <svg
+                  class="quantity__svg decrise-btn__svg"
+                  width="12"
+                  height="12"
+                >
+                  <use href="./images/svg/sprite.svg#icon-btn-arrow"></use>
+                </svg>
+              </button>
+              <input
+                class="form__input quantity__input"
+                type="number"
+                name="icecoffee-quantity"
+                min="0"
+                max="100"
+                placeholder="max 100"
+                tabindex="2"
+              />
+              <button class="quantity__button button-incrise" type="button">
+                <svg
+                  class="quantity__svg incrise-btn__svg"
+                  width="12"
+                  height="12"
+                >
+                  <use href="./images/svg/sprite.svg#icon-btn-arrow"></use>
+                </svg>
+              </button>
+            </span>
+          </div>
+
+          <div class="buynow-products__image-price image-price">
+            <div class="price__bg price__bg--icecoffee"></div>
+
+            <picture class="image-price__image">
+              <source
+                srcset="
+                  ./images/modals/buynow/tablet/home-pic2@1x.png 1x,
+                  ./images/modals/buynow/tablet/home-pic2@2x.png 2x
+                "
+                media="(min-width: 768px)"
+              />
+
+              <source
+                srcset="
+                  ./images/modals/buynow/mobile/home-pic2@1x.png 1x,
+                  ./images/modals/buynow/mobile/home-pic2@2x.png 2x
+                "
+                media="(min-width: 320px)"
+              />
+
+              <img
+                src="./images/modals/buynow/mobile/home-pic2@1x.png"
+                alt="ice cream"
+              />
+            </picture>
+
+            <div class="image-price__price price">
+              <span class="price__cost">$3</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="buynow-products__item">
+          <div class="buynow-products__label">
+            <span class="buynow-products__title">milkshakes</span>
+
+            <span class="buynow-products__quantity quantity">
+              <button
+                class="quantity__button quantity__button--rotated button-decrise"
+                type="button"
+              >
+                <svg
+                  class="quantity__svg decrise-btn__svg"
+                  width="12"
+                  height="12"
+                >
+                  <use href="./images/svg/sprite.svg#icon-btn-arrow"></use>
+                </svg>
+              </button>
+              <input
+                class="form__input quantity__input"
+                type="number"
+                name="milkshakes-quantity"
+                min="0"
+                max="100"
+                placeholder="max 100"
+                tabindex="3"
+              />
+              <button class="quantity__button button-incrise" type="button">
+                <svg
+                  class="quantity__svg incrise-btn__svg"
+                  width="12"
+                  height="12"
+                >
+                  <use href="./images/svg/sprite.svg#icon-btn-arrow"></use>
+                </svg>
+              </button>
+            </span>
+          </div>
+
+          <div class="buynow-products__image-price image-price">
+            <div class="price__bg price__bg--milkshakes"></div>
+
+            <picture class="image-price__image">
+              <source
+                srcset="
+                  ./images/modals/buynow/tablet/home-pic3@1x.png 1x,
+                  ./images/modals/buynow/tablet/home-pic3@2x.png 2x
+                "
+                media="(min-width: 768px)"
+              />
+
+              <source
+                srcset="
+                  ./images/modals/buynow/mobile/home-pic3@1x.png 1x,
+                  ./images/modals/buynow/mobile/home-pic3@2x.png 2x
+                "
+                media="(min-width: 320px)"
+              />
+
+              <img
+                src="./images/modals/buynow/mobile/home-pic3@1x.png"
+                alt="ice cream"
+              />
+            </picture>
+
+            <div class="image-price__price price">
+              <span class="price__cost">$7</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <div class="form__footer">
+    <p class="form__total-price">
+      Total cost:
+      <span id="total-price" class="form__total-price form__total-price--bolded"
+        >$264</span
+      >
+    </p>
+
+    <button class="form__button order-button button" type="button" tabindex="9">
+      Make an order
+    </button>
+  </div>
+</form>
