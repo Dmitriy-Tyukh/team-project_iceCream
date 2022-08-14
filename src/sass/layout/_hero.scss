@@ -6,7 +6,7 @@
 	
    position: relative;
    z-index: 5;
-   @media screen and(min-width:320px) and(max-width: 767px) {
+   @media screen and(min-width:320px) and(max-width: 1200px) {
       overflow-x: hidden;
    }
 
@@ -304,6 +304,91 @@
       left: 184px;
    
    }
+}
 
+@media screen and(min-width: 1200px) {
+   .hero {
+      padding-top: 147px;
+      padding-bottom: 380px;
+   }
+   .hero__title {
+      font-size: 38px;
+      line-height: 1.16;
+      width: 277px;
+
+      margin-bottom: 24px;
+      margin-top: 0;
+   }
+   .hero__passion {
+      font-size: 58px;
+   }
+
+   .btn__primary {
+      padding: 11px 23px;
+      font-size: 14px;
+      line-height: 1.28;
+   }
+   .btn__secondary {
+      padding: 11px 16px;
+      font-size: 14px;
+      line-height: 1.3;
+   }
+   .hero__description {
+      width: 200px;
+
+      font-size: 14px;
+      line-height: 1.43;
+      top: 309px;
+      left: 229px;
+   }
+   .hero__button-arrow {
+      top: 407px;
+      left: 299px;
+   }
+   .hero__button-arrow-circle{
+      width: 26px;
+      height: 26px;
+   }
+
+   .hero__button-arrow-icon{
+      width: 7px;
+      height: 7px;
+   }
+   .hero__counter-number{
+      font-size: 46px;
+      line-height: 1.15px;
+   }
+   .hero__counter-circle {
+      width: 30px;
+      height: 30px;
+
+      left: 66px;
+      top: -30px;
+    
+   }
+
+   .hero__counter-information:nth-child(1){
+      margin-bottom: 38px;
+   }
+   .hero__counter-text {
+      font-size: 14px;
+      line-height: 1.28;
+   }
+   .hero__girl {
+      top:277px;
+      right: 16px;
+   }
+   .hero__circle{
+      width: 534px;
+      height: 534px;
+   }
+   .hero__icecream {
+      top:54px;
+      left: 119px;
+   }
+   .hero__image {
+      left: 517px;
+   }
    
 }
+   
