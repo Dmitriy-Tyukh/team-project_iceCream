@@ -47,16 +47,16 @@
 // плашка мобильного меню
 .menu {
   @media screen and (max-width: 1199px) {
-    position: absolute;
-    overflow: hidden;
+    position: fixed;
+    overflow: auto;
     z-index: 999;
     top: 0;
-    left: 100vw;
+    right: 0;
     width: 250px;
     height: 100vh;
     background-color: var(--mobile-menu-bg);
-    opacity: 0;
-    transform: translateX(0);
+    // opacity: 0;
+    transform: translate(100%);
     transition-property: transform, opacity;
     transition-duration: var(--transition-time);
     transition-timing-function: var(--transition-function);
@@ -70,8 +70,8 @@
   }
 
   &.is-open {
-    transform: translateX(-100%);
-    opacity: 1;
+    transform: translate(0);
+    // opacity: 1;
   }
 }
 
@@ -92,7 +92,7 @@
 .menu-list {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   padding: 0;
 
   @media screen and (min-width: 1200px) {
@@ -105,8 +105,8 @@
   &__item {
     @media screen and (max-width: 1199px) {
       width: 100%;
-      padding-top: 12px;
-      padding-bottom: 12px;
+      // padding-top: 12px;
+      // padding-bottom: 12px;
       border-top: 1px solid var(--mobile-menu-border);
       border-bottom: 1px solid var(--mobile-menu-border);
     }
@@ -127,7 +127,10 @@
   }
 
   &__link {
+    display: block;
     padding-left: 20px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     color: var(--primary-text-color);
     transition-property: color;
     transition-duration: var(--transition-time);
