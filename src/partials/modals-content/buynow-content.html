@@ -58,32 +58,44 @@
     <li class="cathegory__products buynow-products">
       <ul class="buynow-products__list list">
         <li class="buynow-products__item">
-          <label class="buynow-products__label">
+          <div class="buynow-products__label">
             <span class="buynow-products__title">ice cream</span>
 
             <span class="buynow-products__quantity quantity">
-              <button class="quantity__decrise-btn decrise-btn">
-                <svg class="decrise-btn__svg" width="12" height="12">
+              <button
+                class="quantity__button quantity__button--rotated button-decrise"
+                type="button"
+              >
+                <svg
+                  class="quantity__svg decrise-btn__svg"
+                  width="12"
+                  height="12"
+                >
                   <use href="./images/svg/sprite.svg#icon-btn-arrow"></use>
                 </svg>
               </button>
               <input
-                class="quantity__input"
+                class="form__input quantity__input"
                 type="number"
                 name="ic-quantity"
                 min="0"
                 max="100"
                 placeholder="max 100"
               />
-              <button class="quantity__incrise-btn incrise-btn">
-                <svg class="decrise-btn__svg" width="12" height="12">
+              <button class="quantity__button button-incrise" type="button">
+                <svg
+                  class="quantity__svg incrise-btn__svg"
+                  width="12"
+                  height="12"
+                >
                   <use href="./images/svg/sprite.svg#icon-btn-arrow"></use>
                 </svg>
               </button>
             </span>
-          </label>
+          </div>
+
           <div class="buynow-products__image-price image-price">
-            <div class="price__bg"></div>
+            <div class="price__bg price__bg--icecream"></div>
 
             <picture class="image-price__image">
               <source
@@ -114,7 +126,160 @@
             </div>
           </div>
         </li>
+
+        <li class="buynow-products__item">
+          <div class="buynow-products__label">
+            <span class="buynow-products__title">ice coffee</span>
+
+            <span class="buynow-products__quantity quantity">
+              <button
+                class="quantity__button quantity__button--rotated button-decrise"
+                type="button"
+              >
+                <svg
+                  class="quantity__svg decrise-btn__svg"
+                  width="12"
+                  height="12"
+                >
+                  <use href="./images/svg/sprite.svg#icon-btn-arrow"></use>
+                </svg>
+              </button>
+              <input
+                class="form__input quantity__input"
+                type="number"
+                name="ic-quantity"
+                min="0"
+                max="100"
+                placeholder="max 100"
+              />
+              <button class="quantity__button button-incrise" type="button">
+                <svg
+                  class="quantity__svg incrise-btn__svg"
+                  width="12"
+                  height="12"
+                >
+                  <use href="./images/svg/sprite.svg#icon-btn-arrow"></use>
+                </svg>
+              </button>
+            </span>
+          </div>
+
+          <div class="buynow-products__image-price image-price">
+            <div class="price__bg price__bg--icecoffee"></div>
+
+            <picture class="image-price__image">
+              <source
+                srcset="
+                  ./images/modals/buynow/tablet/home-pic2@1x.png 1x,
+                  ./images/modals/buynow/tablet/home-pic2@2x.png 2x
+                "
+                media="(min-width: 768px)"
+              />
+
+              <source
+                srcset="
+                  ./images/modals/buynow/mobile/home-pic2@1x.png 1x,
+                  ./images/modals/buynow/mobile/home-pic2@2x.png 2x
+                "
+                media="(min-width: 320px)"
+              />
+
+              <img
+                src="./images/modals/buynow/mobile/home-pic2@1x.png"
+                alt="ice cream"
+                width="126"
+              />
+            </picture>
+
+            <div class="image-price__price price">
+              <span class="price__cost">$3</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="buynow-products__item">
+          <div class="buynow-products__label">
+            <span class="buynow-products__title">milkshakes</span>
+
+            <span class="buynow-products__quantity quantity">
+              <button
+                class="quantity__button quantity__button--rotated button-decrise"
+                type="button"
+              >
+                <svg
+                  class="quantity__svg decrise-btn__svg"
+                  width="12"
+                  height="12"
+                >
+                  <use href="./images/svg/sprite.svg#icon-btn-arrow"></use>
+                </svg>
+              </button>
+              <input
+                class="form__input quantity__input"
+                type="number"
+                name="ic-quantity"
+                min="0"
+                max="100"
+                placeholder="max 100"
+              />
+              <button class="quantity__button button-incrise" type="button">
+                <svg
+                  class="quantity__svg incrise-btn__svg"
+                  width="12"
+                  height="12"
+                >
+                  <use href="./images/svg/sprite.svg#icon-btn-arrow"></use>
+                </svg>
+              </button>
+            </span>
+          </div>
+
+          <div class="buynow-products__image-price image-price">
+            <div class="price__bg price__bg--milkshakes"></div>
+
+            <picture class="image-price__image">
+              <source
+                srcset="
+                  ./images/modals/buynow/tablet/home-pic3@1x.png 1x,
+                  ./images/modals/buynow/tablet/home-pic3@2x.png 2x
+                "
+                media="(min-width: 768px)"
+              />
+
+              <source
+                srcset="
+                  ./images/modals/buynow/mobile/home-pic3@1x.png 1x,
+                  ./images/modals/buynow/mobile/home-pic3@2x.png 2x
+                "
+                media="(min-width: 320px)"
+              />
+
+              <img
+                src="./images/modals/buynow/mobile/home-pic3@1x.png"
+                alt="ice cream"
+                width="140"
+              />
+            </picture>
+
+            <div class="image-price__price price">
+              <span class="price__cost">$7</span>
+            </div>
+          </div>
+        </li>
       </ul>
+
+      <p class="form__total-price">
+        Total cost:
+        <span
+          id="total-price"
+          class="form__total-price form__total-price--bolded"
+          >$264</span
+        >
+      </p>
+
+      <button class="form__button order-button button" type="button">
+        Make an order
+      </button>
     </li>
   </ul>
 </form>

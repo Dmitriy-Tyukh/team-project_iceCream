@@ -40,10 +40,30 @@
   resize: none;
 }
 
+.buynow-products__list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  margin-bottom: 40px;
+}
+
 .buynow-products__item {
   position: relative;
   width: 100%;
   height: 230px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: calc(100% + 20px);
+    left: 0;
+    background-color: #e1e1e1;
+
+    z-index: 50;
+  }
 }
 
 .buynow-products__label {
@@ -52,7 +72,7 @@
   top: 0;
   left: 0;
 
-  width: 100%;
+  width: 245px;
   height: 100%;
 
   display: flex;
@@ -103,12 +123,20 @@
   border-radius: 50%;
   z-index: 0;
 
-  background-color: var(--secondary-bg-hero);
-
-  transform-origin: 55% 47%;
-
-  //   animation: scaling 10000ms linear 1000ms infinite;
   animation: rotateRing 10000ms linear 1000ms infinite;
+
+  &--icecream {
+    background-color: var(--secondary-bg-hero);
+    transform-origin: 55% 47%;
+  }
+  &--icecoffee {
+    background-color: #f0d1a5;
+    transform-origin: 55% 48%;
+  }
+  &--milkshakes {
+    background-color: #c2e297;
+    transform-origin: 55% 50;
+  }
 }
 
 .price__cost {
@@ -125,22 +153,25 @@
   color: var(--primary-text-color);
 }
 
-@keyframes rotateRing {
-  0% {
-    transform: rotate3d(0, 0, 1, 0deg);
-  }
+.form__total-price {
+  @include font(18, 25, 400, 0.04);
+  color: var(--secondary-text-color);
 
-  100% {
-    transform: rotate3d(0, 0, 1, 360deg);
+  text-align: center;
+
+  &--bolded {
+    font-weight: 700;
+    color: var(--body-text-color);
   }
 }
 
-@keyframes scaling {
-  0% {
-    transform: scale(1);
-  }
+.order-button {
+  width: 100%;
 
-  100% {
-    transform: scale(1.2);
+  &:hover,
+  &:focus {
+    color: var(--primary-text-color);
+
+    background-color: var(--btn-text-color);
   }
 }
