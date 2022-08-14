@@ -6,6 +6,7 @@
 
     &:hover &__box-title {
         transform: scale(1.2);
+
         text-shadow: var(--primary-bg-hero) 10px 10px 10px;
     }
 
@@ -13,6 +14,8 @@
         font-family: 'Titan One';
         text-align: center;
         text-transform: uppercase;
+
+        user-select: none;
 
         color: var(--title-text-color);
     }
@@ -23,12 +26,14 @@
         text-align: center;
         text-transform: uppercase;
 
+        user-select: none;
+
         color: var(--secondary-accent-color);
         margin: 0;
     }
 
     &__list {
-       margin: 0;
+        margin: 0;
         padding: 0;
     }
 
@@ -64,10 +69,12 @@
 
     &__item-title {
         position: relative;
+
         font-family: 'Titan One';
         font-weight: 400;
         text-align: center;
         text-transform: uppercase;
+
         color: var(--primary-text-color);
 
         margin-bottom: 70px;
@@ -75,13 +82,15 @@
         &::after {
             content: "";
             background: url(../images/products/svg/dec-dots.svg);
+
             position: absolute;
             bottom: -40px;
             left: 50%;
-            transform: translateY(-50%) translatex(-50%);
 
             width: 26px;
             height: 6px;
+
+            transform: translateY(-50%) translatex(-50%);
         }
     }
 
@@ -95,6 +104,7 @@
     &__item-extras {
         font-weight: 700;
         text-align: center;
+
         color: var(--primary-text-color);
     }
 
@@ -111,10 +121,9 @@
         border-radius: 50%;
         border: none;
 
-        cursor: pointer;
-
         color: var(--btn-text-color);
 
+        cursor: pointer;
 
         transition: color var(--transition-time) var(--timing-function), box-shadow var(--transition-time) var(--timing-function), transform var(--transition-time) var(--timing-function);
 
@@ -128,9 +137,11 @@
 
     &__item-icon {
         position: relative;
+        top: 35%;
+
         width: 10px;
         height: 10px;
-        top: 35%;
+
         transform: translateY(-50%);
 
         fill: currentColor;
@@ -141,14 +152,24 @@
 
         margin-top: 40px;
 
-        border-radius: 25px;
+        border-radius: 24px;
         text-align: center;
-
-        background-color: #f44a75;
 
         user-select: none;
 
         box-shadow: rgba(50, 50, 50, 0.75) 6px 0px 12px -7px, rgba(50, 50, 50, 0.75) -6px 0px 12px -7px;
+
+        &--first-color {
+            background-color: #ff8aa7;
+        }
+
+        &--second-color {
+            background-color: #eebc77;
+        }
+
+        &--third-color {
+            background-color: #9cc467;
+        }
     }
 
     &__item-info-btn:hover, &__item-info-btn:focus {
@@ -165,12 +186,12 @@
 
         transform: scale(0.3);
 
-
         transition: opacity var(--transition-time) var(--timing-function), transform var(--transition-time) var(--timing-function),box-shadow var(--transition-time) var(--timing-function);
     }
 
     &__item-info-btn:hover~&__item-extras-hover {
         opacity: 1;
+
         transform: scale(1);
     }
 
@@ -197,6 +218,7 @@
             &::before {
                 width: 280px;
                 height: 280px;
+
                 transform: translateY(-50%);
             }
 
@@ -204,8 +226,9 @@
                 &::before {
                     background-image: url(../images/products/mobile/ic-product1@1x.png);
                     background-size: cover;
+
                     @media (min-resolution: 2dppx) {
-                    background-image: url(../images/products/mobile/ic-product1@2x.png);
+                        background-image: url(../images/products/mobile/ic-product1@2x.png);
                     }
                 }
             }
@@ -213,15 +236,17 @@
                 &::before {
                     background: url(../images/products/mobile/ic-product2@1x.png);
                     background-size: cover;
-                @media (min-resolution: 2dppx) {
-                    background-image: url(../images/products/mobile/ic-product2@2x.png);
+
+                    @media (min-resolution: 2dppx) {
+                        background-image: url(../images/products/mobile/ic-product2@2x.png);
                     }
                 }
             }
         &:nth-child(3) {
             &::before {
-                    background: url(../images/products/mobile/ic-product3@1x.png);
-                    background-size: cover;
+                background: url(../images/products/mobile/ic-product3@1x.png);
+                background-size: cover;
+
                 @media (min-resolution: 2dppx) {
                     background-image: url(../images/products/mobile/ic-product3@2x.png);
                 }
@@ -244,7 +269,7 @@
         }
 
         &__item-extras-text {
-            bottom: 40;
+            bottom: 40px;
             padding: 5px;
         }
 
@@ -260,6 +285,7 @@
         &__article {
             font-size: 26px;
             line-height: 1.15;
+
             margin-bottom: 18px;
         }
 
@@ -267,9 +293,11 @@
             font-size: 48px;
             line-height: 1.14;
         }
+
         &__list {
             display: flex;
-            }
+        }
+
         &__item {
             margin-top: 158px;
             margin-right: 16px;
@@ -283,6 +311,7 @@
             &::before {
                 width: 224px;
                 height: 224px;
+
                 transform: translateY(-60%);
             }
 
@@ -372,9 +401,11 @@
             &:last-child {
                 margin-right: 0;
             }
+
                 &::before {
                     width: 368px;
                     height: 394px;
+
                     transform: translateY(-65%);
                 }
                 &:nth-child(1) {
@@ -428,7 +459,6 @@
         }
 
         &__item-extras-text {
-
             padding: 10px;
         }
     }
