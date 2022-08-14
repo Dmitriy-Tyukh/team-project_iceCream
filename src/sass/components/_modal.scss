@@ -1,34 +1,28 @@
 .backdrop {
   position: fixed;
-  z-index: 200;
+  top: 0;
+  left: 0;
+
+  z-index: 1500;
+
   overflow-y: auto;
 
   width: 100%;
   height: 100%;
   padding: 15px;
+  padding-left: calc((100vw - 280px) / 2);
+  background-color: var(--color-backdrop-overlay);
 
   @include projTransitions((opacity, visibility));
-
-  @include tablet {
-    padding: 30px 30px;
-  }
-
-  top: 0;
-  left: 0;
-
-  background-color: var(--color-backdrop-overlay);
 }
 
 .modal {
-  position: relative;
-  // margin: 0 auto;
-  top: 50%;
-  left: 50%;
+  position: absolute;
 
-  transform: translate(-50%, -50%);
-
+  width: calc(100% - 30px);
   max-width: 280px;
-  height: 100%;
+  height: calc(100% - 30px);
+
   border-radius: 20px;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -39,16 +33,26 @@
 
   @include projTransitions(transform);
 
-  // transform: translateX(0);
+  transform: translateX(0);
 
   .backdrop.is-hidden & {
-    transform: translate(110%, -50%);
+    // transform: translate(100%, -50%);
+
+    transform: translateX(100%);
   }
 
   @include tablet {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
     max-width: 650px;
     height: 550px;
     padding-bottom: 20px;
+
+    .backdrop.is-hidden & {
+      transform: translate(100%, -50%);
+    }
   }
 }
 
