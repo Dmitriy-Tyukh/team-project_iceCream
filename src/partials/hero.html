@@ -1,21 +1,68 @@
 <section class="hero section">
    <div class="container">
       <h1 class="hero__title"><span>ice cream made with</span> <span class="hero__passion">passion</span></h1>
-      <span href="#products" class="button btn__primary" type="button">Products</span>
-      <span href="#how it’s made" class="button btn__secondary" type="button">How it’s made?</span>
+      
+      <a href="#products" class="button btn__primary" type="button">Products</a>
+      <a href="#how it’s made" class="button btn__secondary" type="button">How it’s made?</a>
 
       <div class="hero__image">
          <div class="hero__circle"></div>
          <div class="hero__icecream">
-            <img
+            <!-- <img
                srcset="./images/hero/mobile/icecream-hero@1x.png 1x,
                   ./images/hero/mobile/icecream-hero@2x.png 2x"
                src="./images/hero/mobile/icecream-hero@1x.png"
                alt="Мороженное"
                loading="lazy"
-            />
+            /> -->
+
+            <picture>
+               <source media="(min-width: 1200px)"
+               srcset="./images/hero/desktop/icecream-hero@1x.png 1x, ./images/hero/desktop/icecream-hero@2x.png 2x">
+               <source media="(min-width: 768px)"
+               srcset="./images/hero/tablet/icecream-hero@1x.png 1x, ./images/hero/tablet/icecream-hero@2x.png 2x">
+               <source media="(max-width: 767px)"
+               srcset="./images/hero/mobile/icecream-hero@1x.png 1x, ./images/hero/mobile/icecream-hero@2x.png 2x">
+               <img  src="./images/hero/mobile/icecream-hero@1x.png" alt="icecream">
+            </picture>
          </div>
       </div>
       
+      <div class="hero__milk">
+         <picture>
+            <source media="(min-width: 1200px)"
+            srcset="./images/hero/desktop/bio-eco-milk@1x.png 1x, ./images/hero/desktop/bio-eco-milk@2x.png 2x">
+            <source media="(min-width: 768px)"
+            srcset="./images/hero/tablet/bio-eco-milk@1x.png 1x, ./images/hero/tablet/bio-eco-milk@2x.png 2x">
+            
+            <img  src="./images/hero/tablet/bio-eco-milk@1x.png" alt="icecream">
+         </picture>
+
+      </div>
+      <p class="hero__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+
+      <div class="hero__number">
+         <span class="">16</span>
+         <span></span>
+
+         <span>23</span>
+         <span></span>
+      </div>
+
+      
+         
+     
+      
+      <div class="hero__girl">
+         <picture>
+            <source media="(min-width: 1200px)"
+            srcset="./images/hero/desktop/girl@1x.png 1x, ./images/hero/desktop/girl@2x.png 2x">
+            <source media="(min-width: 768px)"
+            srcset="./images/hero/tablet/girl@1x.png 1x, ./images/hero/tablet/girl@2x.png 2x">
+            
+            <img  src="./images/hero/tablet/girl@1x.png" alt="girl">
+         </picture>
+
+      </div>
    </div>
 </section>
