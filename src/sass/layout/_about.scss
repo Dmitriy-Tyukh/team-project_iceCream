@@ -2,6 +2,8 @@
     @extend .section;
     background-color:var( --bg-about);
 
+    transition: transform var(--transition-time) var(--timing-function), text-shadow var(--transition-time) var(--timing-function);
+
     @media screen and (max-width: 767px){
         background-image: url('../images/about/milk-bg@1x.png');
         background-size: contain;
@@ -29,7 +31,19 @@
         (min-resolution: 2dppx) {
         background-image: url('../images/about/milk-bg@2x.png');
         }
-    }         
+    } 
+    
+    &:hover .about__subtitle,
+    &:focus .about__subtitle {
+        transform: scale(1.2);
+        text-shadow: var(--primary-bg-hero) 10px 10px 10px;
+    }
+
+    &:hover .about__title,
+    &:focus .about__title    {
+        transform: scale(1.2);
+        text-shadow: var(--primary-bg-hero) 10px 10px 10px;
+    }
 }
 
 .about__subtitle {
@@ -42,7 +56,7 @@
     text-transform: uppercase;
 
     color: var(--title-text-color);
-    transition: transform var(--transition-time) var(--timing-function);
+    transition: transform var(--transition-time) var(--timing-function), text-shadow var(--transition-time) var(--timing-function);
 
     &:hover,
     &:focus {
@@ -81,7 +95,7 @@
     &:hover,
     &:focus {
         transform: scale(1.2);
-        text-shadow: var(--primary-bg-hero) 1px 0 10px;
+        text-shadow: var(--primary-bg-hero) 10px 10px 10px;
     }
 
 
