@@ -1,20 +1,16 @@
 <section class="hero section">
    <div class="container">
       <h1 class="hero__title"><span>ice cream made with</span> <span class="hero__passion">passion</span></h1>
+      <ul class="list hero__list">
+         <li class="hero__item"><a href="#products" class="btn__primary" >Products</a></li>
+         <li class="hero__item"><a href="#how it’s made" class="button btn__secondary" >How it’s made?</a></li>
+      </ul>
       
-      <a href="#products" class="button btn__primary" type="button">Products</a>
-      <a href="#how it’s made" class="button btn__secondary" type="button">How it’s made?</a>
 
       <div class="hero__image">
          <div class="hero__circle"></div>
          <div class="hero__icecream">
-            <!-- <img
-               srcset="./images/hero/mobile/icecream-hero@1x.png 1x,
-                  ./images/hero/mobile/icecream-hero@2x.png 2x"
-               src="./images/hero/mobile/icecream-hero@1x.png"
-               alt="Мороженное"
-               loading="lazy"
-            /> -->
+            
 
             <picture>
                <source media="(min-width: 1200px)"
@@ -41,18 +37,27 @@
       </div>
       <p class="hero__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
 
-      <div class="hero__number">
-         <span class="">16</span>
-         <span></span>
-
-         <span>23</span>
-         <span></span>
+      <div class="hero__button-arrow">
+         <div class="hero__button-arrow-circle"></div>
+         <svg class="hero__button-arrow-icon">
+            <use href="./images/svg/sprite.svg#icon-arrow-right"></use>
+         </svg>
+      </div>
+      
+      <div class="hero__counter">
+         <div class="hero__counter-information">
+            <span class="hero__counter-number">16</span>
+            <div class="hero__counter-circle"></div>
+            <p class="hero__counter-text">cafes</p>
+         </div>
+         
+         <div class="hero__counter-information">
+            <span class="hero__counter-number">23</span>
+            <div class="hero__counter-circle"></div>
+            <p class="hero__counter-text">food trucks</p>
+         </div>
       </div>
 
-      
-         
-     
-      
       <div class="hero__girl">
          <picture>
             <source media="(min-width: 1200px)"
