@@ -26,8 +26,12 @@
 }
 
 .client-info {
+  margin-left: 0;
   flex: 1 1 100%;
-  margin-left: 10px;
+
+  @include tablet {
+    margin-left: 10px;
+  }
 }
 
 .client-info__title {

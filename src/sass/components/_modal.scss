@@ -25,7 +25,7 @@
 
   border-radius: 20px;
   padding-top: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 
   overflow: hidden;
 
@@ -48,7 +48,7 @@
 
     max-width: 650px;
     height: 550px;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
 
     .backdrop.is-hidden & {
       transform: translate(100%, -50%);
@@ -88,13 +88,16 @@
 .modals-content {
   position: relative;
   display: block;
-
+  padding: 0;
+  margin: 0;
   width: 100%;
   height: 100%;
+  // height: calc(100% - 15px);
 }
 
 .all-modals__item {
   position: absolute;
+  display: block;
   padding-left: 15px;
   padding-right: 15px;
 
@@ -102,6 +105,7 @@
   left: 0;
   width: 100%;
   height: 100%;
+  // height: calc(100% - 15px);
 
   overflow-y: auto;
 
