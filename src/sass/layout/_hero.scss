@@ -11,8 +11,8 @@
    }
 
    @media screen and(min-width:768px) {
-      padding-top: 80px;
-      padding-bottom: 187px;
+      padding-top: 100px;
+      padding-bottom: 185px;
    }
 }
 
@@ -41,9 +41,6 @@
       font-size: 22px;
       line-height: 1.14;
       width: 162px;
-
-      margin-top: 20px;
-      
    }
 }
 
@@ -58,9 +55,7 @@
    @media screen and(min-width:768px) {
       font-size: 34px;
    line-height: 1;
-   
-      
-   }
+}
 }
 
 .hero__list {
@@ -74,29 +69,24 @@
 
 
 .btn__primary {
-      
    cursor: pointer;
-
-  border-style: none;
-  border-radius: 20px;
+   border-style: none;
+   border-radius: 20px;
    align-items: center;
 
-  
+   position: relative;
+   z-index: 25;         
+   padding: 7px 16px;
    
-      position: relative;
-      z-index: 25;         
-      padding: 7px 16px;
-   
-      vertical-align: middle;
-      font-weight: 400;
-      font-size: 8px;
-      line-height: 1.25;
-      color: var(--primary-text-color);
-      background: #C7133E;
+   vertical-align: middle;
+   font-weight: 400;
+   font-size: 8px;
+   line-height: 1.25;
+   color: var(--primary-text-color);
+   background: #C7133E;
+   margin: 0;
 
-      
-
-      margin: 0;
+   transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function);
    //    &:hover,
    //    &:focus {
    //       color: var(--primary-text-color);
@@ -105,7 +95,6 @@
    }
    
    .btn__secondary {
-      
       @extend %button;
       padding: 7px 13px;
       margin: 0;
@@ -136,19 +125,17 @@
          top: -59px;
          left: 248px;
       }
-
    }
 
 .hero__circle {
-   
-
    border-radius: 50%;
-   background: #FFA5BA;
+   background: var(--title-text-color);
    
-
    height: 344px;
    width: 346px;
-   // z-index: 10;
+   
+   // transform-origin: 48% 47%;
+   // animation: rotateRing 10000ms linear 1000ms infinite;
 
    @media screen and(min-width:768px) {
       width: 335px;
@@ -184,7 +171,42 @@
       display: none;
    }
 }
-@media screen and(min-width:768px) {
+// @media screen and(min-width:768px) {
+//    .hero__description {
+//       font-family: 'DM Sans';
+//       font-style: normal;
+//       font-weight: 400;
+//       font-size: 8px;
+//       line-height: 1.5;
+//       letter-spacing: normal;
+
+//       width: 114px;
+
+//       color: #FFFFFF;
+
+//       position: absolute;
+//       top: 187px;
+
+//       z-index: 300;
+//       left: 184px;
+
+//       margin-bottom: 0;
+//    }
+//    .hero__girl {
+//       position: absolute;
+//       top: 165px;
+//       right: 32px;
+//       z-index: 100;
+//    }
+
+//    .hero__milk{
+//       position: absolute;
+//       top: 146px;
+//    }
+// }
+
+
+@media screen and(min-width: 768px) {
    .hero__description {
       font-family: 'DM Sans';
       font-style: normal;
@@ -205,25 +227,18 @@
 
       margin-bottom: 0;
    }
-}
+   .hero__girl {
+      position: absolute;
+      top: 165px;
+      right: 32px;
+      z-index: 100;
+   }
 
-@media screen and(min-width:768px) {
-.hero__girl {
-   position: absolute;
-   top: 165px;
-   right: 32px;
-   z-index: 100;
-}
-}
-
-@media screen and(min-width:768px) {
    .hero__milk{
       position: absolute;
       top: 146px;
    }
-}
 
-@media screen and(min-width: 768px) {
    .hero__counter {
       
       position: absolute;
@@ -356,31 +371,34 @@
       display: block;
       margin-top: 1px;
       margin-left: 3px;
-         }
+   }
 
+   .hero__list-item:first-child a {
+      margin-right: 12px;
+   }
+   
    .hero__counter {
-      top:10px;
+      top: 10px;
+      right: 34px;
    }      
    .hero__counter-number{
       font-size: 46px;
-      line-height: 1.15px;
+      line-height: 1.15;
    }
    .hero__counter-circle {
       width: 30px;
       height: 30px;
 
-      left: 66px;
-      top: -30px;
-    
+      left: 60px;
+      top: -5px;
    }
 
    .hero__counter-information:nth-child(1){
-      margin-bottom: 38px;
+      margin-bottom: 18px;
    }
    .hero__counter-text {
       font-size: 14px;
       line-height: 1.28;
-      margin-top: 2px;
    }
    .hero__girl {
       top:277px;
@@ -389,18 +407,19 @@
    .hero__circle{
       width: 534px;
       height: 534px;
+
+      
    }
    .hero__icecream {
       top:54px;
       left: 119px;
    }
    .hero__image {
-      left: 480px;
+      left: 502px;
       top: -93px;
    }
    .hero__milk {
       top: 241px;
    }
-   
 }
    
