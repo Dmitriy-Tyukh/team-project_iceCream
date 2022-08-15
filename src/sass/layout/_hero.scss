@@ -67,7 +67,7 @@
    display: flex;
 }
 
-.hero__item:first-child a {
+.hero__list-item:first-child a {
    margin-right: 8px;
 }
 
@@ -85,7 +85,7 @@
    
       position: relative;
       z-index: 25;         
-      padding: 7px 13px;
+      padding: 7px 16px;
    
       vertical-align: middle;
       font-weight: 400;
@@ -343,7 +343,7 @@
    }
    .hero__button-arrow {
       top: 407px;
-      left: 299px;
+      left: 230px;
    }
    .hero__button-arrow-circle{
       width: 26px;
@@ -352,8 +352,11 @@
 
    .hero__button-arrow-icon{
       width: 7px;
-      height: 7px;
-   }
+      height: 11px;
+      display: block;
+      margin-top: 1px;
+      margin-left: 3px;
+         }
    .hero__counter-number{
       font-size: 46px;
       line-height: 1.15px;
@@ -388,6 +391,10 @@
    }
    .hero__image {
       left: 517px;
+      top: -102px;
+   }
+   .hero__milk {
+      top: 241px;
    }
    
 }
