@@ -1,13 +1,6 @@
 .products {
-
     &__box-title {
-        transition: transform var(--transition-time) var(--timing-function), text-shadow var(--transition-time) var(--timing-function);
-    }
-
-    &:hover &__box-title {
-        transform: scale(1.2);
-
-        text-shadow: var(--primary-bg-hero) 10px 10px 10px;
+        user-select: none;
     }
 
     &__article {
@@ -15,18 +8,13 @@
         text-align: center;
         text-transform: uppercase;
 
-        user-select: none;
-
         color: var(--title-text-color);
     }
-
 
     &__title {
         font-family: 'Titan One';
         text-align: center;
         text-transform: uppercase;
-
-        user-select: none;
 
         color: var(--secondary-accent-color);
         margin: 0;
@@ -51,7 +39,7 @@
         }
 
         &:hover, &:focus {
-            transform: scale(1.1);
+            transform: scale(1.025);
 
             box-shadow: rgba(50, 50, 50, 0.75) 6px 0px 12px -7px, rgba(50, 50, 50, 0.75) -6px 0px 12px -7px;
         }
