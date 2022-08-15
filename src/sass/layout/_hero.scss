@@ -309,7 +309,7 @@
 @media screen and(min-width: 1200px) {
    .hero {
       padding-top: 147px;
-      padding-bottom: 380px;
+      padding-bottom: 323px;
    }
    .hero__title {
       font-size: 38px;
@@ -357,6 +357,10 @@
       margin-top: 1px;
       margin-left: 3px;
          }
+
+   .hero__counter {
+      top:10px;
+   }      
    .hero__counter-number{
       font-size: 46px;
       line-height: 1.15px;
@@ -376,6 +380,7 @@
    .hero__counter-text {
       font-size: 14px;
       line-height: 1.28;
+      margin-top: 2px;
    }
    .hero__girl {
       top:277px;
@@ -390,8 +395,8 @@
       left: 119px;
    }
    .hero__image {
-      left: 517px;
-      top: -102px;
+      left: 480px;
+      top: -93px;
    }
    .hero__milk {
       top: 241px;
