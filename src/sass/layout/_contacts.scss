@@ -346,3 +346,44 @@ color: var(--btn-text-color);
     width: 100%;
     height: 100%;
 }
+
+.franchise__li{
+@media screen and (min-width: 768px) {
+display: flex;
+        // flex-direction: row;
+        justify-content: space-around;
+        
+    }
+}
+
+.franchise__name {
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 20px;
+    // text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    color: var(--body-text-color);
+}
+
+.franchise__job-title{
+    margin-bottom: 8px;
+    font-size: 16px;
+        line-height: 1.55;
+    font-family: Titan One;
+        letter-spacing: 0.04em;
+        // text-transform: uppercase;
+    
+        color:var(--btn-text-color);
+}
+
+
+.franchise__work{
+    margin-bottom: 8px;
+    font-weight: 500;
+        font-size: 12px;
+        line-height: 1.5;
+    
+        color: var(--secondary-text-color);
+}
