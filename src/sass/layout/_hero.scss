@@ -12,7 +12,7 @@
 
    @media screen and(min-width:768px) {
       padding-top: 100px;
-      padding-bottom: 185px;
+      padding-bottom: 187px;
    }
 }
 
@@ -141,12 +141,46 @@
    // transform-origin: 48% 47%;
    // animation: rotateRing 10000ms linear 1000ms infinite;
 
+   // -webkit-animation: pulsing 3s infinite;
+   // animation: pulsing 3s infinite;
+
    @media screen and(min-width:768px) {
       width: 335px;
       height: 333px;
       
    }
 }
+
+// @-webkit-keyframes pulsing {
+//    0% {
+//      -webkit-transform: scale(0.5, 0.5);
+//      transform: scale(0.5, 0.5)
+//    }
+//    50% {
+//      -webkit-transform: scale(1.0, 1.0);
+//      transform: scale(1.0, 1.0);
+//    }
+//    100% {
+//      -webkit-transform: scale(0.5, 0.5);
+//      transform: scale(0.5, 0.5);
+//    }
+//  }
+ 
+//  @keyframes pulsing {
+//    0% {
+//      -webkit-transform: scale(1, 1);
+//      transform: scale(1, 1)
+//    }
+//    50% {
+//      -webkit-transform: scale(1.0, 1.0);
+//      transform: scale(1.0, 1.0);
+//    }
+//    100% {
+//      -webkit-transform: scale(1, 1);
+//      transform: scale(1, 1);
+//    }
+//  }
+
 .hero__icecream {
    position: absolute;
    top: 9px;
@@ -175,39 +209,6 @@
       display: none;
    }
 }
-// @media screen and(min-width:768px) {
-//    .hero__description {
-//       font-family: 'DM Sans';
-//       font-style: normal;
-//       font-weight: 400;
-//       font-size: 8px;
-//       line-height: 1.5;
-//       letter-spacing: normal;
-
-//       width: 114px;
-
-//       color: #FFFFFF;
-
-//       position: absolute;
-//       top: 187px;
-
-//       z-index: 300;
-//       left: 184px;
-
-//       margin-bottom: 0;
-//    }
-//    .hero__girl {
-//       position: absolute;
-//       top: 165px;
-//       right: 32px;
-//       z-index: 100;
-//    }
-
-//    .hero__milk{
-//       position: absolute;
-//       top: 146px;
-//    }
-// }
 
 
 @media screen and(min-width: 768px) {
@@ -329,7 +330,7 @@
 @media screen and(min-width: 1200px) {
    .hero {
       padding-top: 147px;
-      padding-bottom: 320px;
+      padding-bottom: 322px;
    }
    .hero__title {
       font-size: 38px;
@@ -408,7 +409,7 @@
       line-height: 1.28;
    }
    .hero__girl {
-      top:277px;
+      top:276px;
       right: 16px;
    }
    .hero__circle{
@@ -423,7 +424,7 @@
    }
    .hero__image {
       left: 517px;
-      top: -93px;
+      top: -95px;
    }
    .hero__milk {
       top: 241px;
