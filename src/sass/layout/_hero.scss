@@ -67,7 +67,7 @@
    display: flex;
 }
 
-.hero__item:first-child a {
+.hero__list-item:first-child a {
    margin-right: 8px;
 }
 
@@ -85,7 +85,7 @@
    
       position: relative;
       z-index: 25;         
-      padding: 7px 13px;
+      padding: 7px 16px;
    
       vertical-align: middle;
       font-weight: 400;
@@ -309,7 +309,7 @@
 @media screen and(min-width: 1200px) {
    .hero {
       padding-top: 147px;
-      padding-bottom: 380px;
+      padding-bottom: 323px;
    }
    .hero__title {
       font-size: 38px;
@@ -343,7 +343,7 @@
    }
    .hero__button-arrow {
       top: 407px;
-      left: 299px;
+      left: 230px;
    }
    .hero__button-arrow-circle{
       width: 26px;
@@ -352,8 +352,15 @@
 
    .hero__button-arrow-icon{
       width: 7px;
-      height: 7px;
-   }
+      height: 11px;
+      display: block;
+      margin-top: 1px;
+      margin-left: 3px;
+         }
+
+   .hero__counter {
+      top:10px;
+   }      
    .hero__counter-number{
       font-size: 46px;
       line-height: 1.15px;
@@ -373,6 +380,7 @@
    .hero__counter-text {
       font-size: 14px;
       line-height: 1.28;
+      margin-top: 2px;
    }
    .hero__girl {
       top:277px;
@@ -387,7 +395,11 @@
       left: 119px;
    }
    .hero__image {
-      left: 517px;
+      left: 480px;
+      top: -93px;
+   }
+   .hero__milk {
+      top: 241px;
    }
    
 }
