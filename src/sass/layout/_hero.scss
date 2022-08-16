@@ -4,6 +4,12 @@
   padding-top: 194px;
   padding-bottom: 158px;
 
+
+   @media screen and(min-width:768px) {
+      padding-top: 100px;
+      padding-bottom: 187px;
+   }
+
   position: relative;
   z-index: 5;
   @media screen and(min-width:320px) and(max-width: 1200px) {
@@ -14,6 +20,7 @@
     padding-top: 100px;
     padding-bottom: 185px;
   }
+
 }
 
 .hero__container {
@@ -130,8 +137,17 @@
 }
 
 .hero__circle {
+
+   border-radius: 50%;
+   background: var(--title-text-color);
+   
+   height: 344px;
+   width: 346px;
+   
+
   border-radius: 50%;
   background: var(--title-text-color);
+
 
   height: 344px;
   width: 346px;
@@ -144,6 +160,7 @@
     height: 333px;
   }
 }
+
 .hero__icecream {
   position: absolute;
   top: 9px;
@@ -171,39 +188,6 @@
     display: none;
   }
 }
-// @media screen and(min-width:768px) {
-//    .hero__description {
-//       font-family: 'DM Sans';
-//       font-style: normal;
-//       font-weight: 400;
-//       font-size: 8px;
-//       line-height: 1.5;
-//       letter-spacing: normal;
-
-//       width: 114px;
-
-//       color: #FFFFFF;
-
-//       position: absolute;
-//       top: 187px;
-
-//       z-index: 300;
-//       left: 184px;
-
-//       margin-bottom: 0;
-//    }
-//    .hero__girl {
-//       position: absolute;
-//       top: 165px;
-//       right: 32px;
-//       z-index: 100;
-//    }
-
-//    .hero__milk{
-//       position: absolute;
-//       top: 146px;
-//    }
-// }
 
 @media screen and(min-width: 768px) {
   .hero__description {
@@ -319,6 +303,16 @@
 }
 
 @media screen and(min-width: 1200px) {
+
+   .hero {
+      padding-top: 147px;
+      padding-bottom: 322px;
+   }
+   .hero__title {
+      font-size: 38px;
+      line-height: 1.16;
+      width: 277px;
+
   .hero {
     padding-top: 147px;
     padding-bottom: 320px;
@@ -327,6 +321,7 @@
     font-size: 38px;
     line-height: 1.16;
     width: 277px;
+
 
     margin-bottom: 27px;
     margin-top: 0;
@@ -387,6 +382,36 @@
     width: 30px;
     height: 30px;
 
+
+   .hero__counter-information:nth-child(1){
+      margin-bottom: 18px;
+   }
+   .hero__counter-text {
+      font-size: 14px;
+      line-height: 1.28;
+   }
+   .hero__girl {
+      top:276px;
+      right: 16px;
+   }
+   .hero__circle{
+      width: 534px;
+      height: 534px;
+
+      
+   }
+   .hero__icecream {
+      top:54px;
+      left: 119px;
+   }
+   .hero__image {
+      left: 517px;
+      top: -95px;
+   }
+   .hero__milk {
+      top: 241px;
+   }
+
     left: 63px;
     top: -5px;
   }
@@ -417,4 +442,6 @@
   .hero__milk {
     top: 241px;
   }
+
+}
 }
