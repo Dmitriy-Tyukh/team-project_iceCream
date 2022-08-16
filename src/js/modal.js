@@ -50,7 +50,7 @@
     refs.backdrop.classList.toggle('is-hidden');
     refs.modalsContent.forEach(el => {
       if (!el.classList.contains('is-hidden')) {
-        el.classList?.remove('is-hidden');
+        el.classList?.toggle('is-hidden');
       }
       document.removeEventListener('keydown', closeModalByEscape);
     });
