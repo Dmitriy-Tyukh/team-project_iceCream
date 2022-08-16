@@ -1,0 +1,55 @@
+// Franchise
+.franchise__team {
+    padding: 0;
+
+    @media screen and (min-width: 320px) {
+        display: flex;
+        justify-content: space-around;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+}
+    .franchise__li {
+
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        width: 290px;
+        padding: 16px;
+        background: var(--bg-about);
+        box-shadow: 0px 25px 35px rgba(212, 20, 67, 0.1);
+        border-radius: 24px;
+
+    }
+
+
+.franchise__photo {
+    width: 100%;
+    border-radius: 50%;
+    border: 3px solid var(--title-text-color);
+}
+
+.franchise__name {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
+    color: var(--secondary-text-color);
+}
+
+.franchise__job-title {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
+    color: var(--secondary-accent-color);
+}
+
+.franchise__work {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
+    color: var(--title-text-color);
+}
