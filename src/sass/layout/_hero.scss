@@ -4,12 +4,6 @@
   padding-top: 194px;
   padding-bottom: 158px;
 
-
-   @media screen and(min-width:768px) {
-      padding-top: 100px;
-      padding-bottom: 187px;
-   }
-
   position: relative;
   z-index: 5;
   @media screen and(min-width:320px) and(max-width: 1200px) {
@@ -138,16 +132,8 @@
 
 .hero__circle {
 
-   border-radius: 50%;
-   background: var(--title-text-color);
-   
-   height: 344px;
-   width: 346px;
-   
-
   border-radius: 50%;
   background: var(--title-text-color);
-
 
   height: 344px;
   width: 346px;
@@ -155,11 +141,31 @@
   // transform-origin: 48% 47%;
   // animation: rotateRing 10000ms linear 1000ms infinite;
 
+  -webkit-animation: pulsing 3s infinite;
+  animation: pulsing 3s infinite;
+
   @media screen and(min-width:768px) {
     width: 335px;
     height: 333px;
   }
 }
+
+
+@keyframes pulsing {
+  0% {
+    -webkit-transform: scale(0.8, 0.8);
+    transform: scale(0.8, 0.8)
+  }
+  50% {
+    -webkit-transform: scale(1.0, 1.0);
+    transform: scale(1.0, 1.0);
+  }
+  100% {
+    -webkit-transform: scale(0.8, 0.8);
+    transform: scale(0.8, 0.8);
+  }
+}
+  
 
 .hero__icecream {
   position: absolute;
