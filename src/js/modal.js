@@ -19,7 +19,6 @@
   const refs = {
     // openModalBtn: document.querySelector('[data-modal-open]'),
     closeModalBtn: document.querySelector('[data-modal-close]'),
-
     buttons: document.querySelectorAll('[data-button]'),
     backdrop: document.querySelector('.backdrop'),
     modalsContent: document.querySelectorAll('[data-modal]'),
@@ -51,7 +50,7 @@
     refs.backdrop.classList.toggle('is-hidden');
     refs.modalsContent.forEach(el => {
       if (!el.classList.contains('is-hidden')) {
-        el.classList.toggle('is-hidden');
+        el.classList?.remove('is-hidden');
       }
       document.removeEventListener('keydown', closeModalByEscape);
     });
