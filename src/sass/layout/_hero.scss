@@ -352,6 +352,7 @@
   .hero__button-arrow {
     top: 407px;
     left: 230px;
+    transition: var(--transition-time);
   }
 
   .hero__button-arrow-circle {
@@ -420,5 +421,67 @@
 
   .hero__milk {
     top: 241px;
+  }
+}
+
+@media screen and(min-width:768px) {
+  .hero__arrow-hover {
+    position: relative;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transform: scale(0.3);
+
+    transition: opacity var(--transition-time) var(--timing-function), 
+                transform var(--transition-time) var(--timing-function);
+  }
+
+  .hero__button-arrow:hover~.hero__arrow-hover {
+    opacity: 1;
+
+    transform: scale(1);
+}
+
+.hero__button-arrow:hover {
+  transform: rotate(-90deg);
+}
+
+.hero__button-arrow-circle:hover,
+.hero__button-arrow-circle:focus {
+  background-color: var(--accent-btn-color);
+}
+}
+
+@media screen and(min-width:320px) and(max-width: 767px) {
+  .hero__arrow-hover {
+    display: none;
+  }
+}
+@media screen and(min-width: 768px) {
+  .hero__arrow-hover-text {
+    width: 114px;
+    font-size: 8px;
+    line-height: 1.5;
+    color: var(--primary-text-color);
+    font-weight: 400;
+    letter-spacing: normal;
+  
+    position: absolute;
+    top: 20px;
+  }
+} 
+
+@media screen and(min-width: 1200px) {
+  .hero__arrow-hover-text {
+    width: 150px;
+    font-size: 14px;
+    line-height: 1.43;
+    color: var(--primary-text-color);
+    font-weight: 400;
+    letter-spacing: normal;
+  
+    position: absolute;
+    top: 20px;
   }
 }
