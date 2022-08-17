@@ -3,7 +3,15 @@ import { debounce } from 'debounce';
 const refs = {
   form: document.querySelector('.form'),
   productQuantity: document.querySelectorAll('.quantity'),
-  incBtn: document.querySelector('[data-incriseButton]'),
+  totalCost: document.getElementById('total-price'),
+};
+
+let totalProdCost = 0;
+
+const products = {
+  icecream: { price: 5, quantity: 0 },
+  icecoffee: { price: 3, quantity: 0 },
+  milkshakes: { price: 7, quantity: 0 },
 };
 
 // console.log('refs.form.elements :>> ', refs.form.elements);
@@ -13,14 +21,14 @@ const refs = {
 class ProductsQuantity {
   constructor(selector) {
     this.refs = this.getRefs(selector);
-    this._totalQuantity = this.totalQuantity;
+    this._totalQuantity = Number(this.totalQuantity);
 
     // incrisebutton listener
     this.refs.incrisebutton.addEventListener('click', () => {
       this.inc();
       // return this.refs.inputvalue.value;
       // console.log(this.totalQuantity);
-      return this.totalQuantity;
+      this.totalQuantity;
     });
 
     // decrisebutton listener
@@ -28,15 +36,19 @@ class ProductsQuantity {
       this.dec();
       // return this.refs.inputvalue.value;
 
-      console.log(this.totalQuantity);
+      // console.log(this.totalQuantity);
+      this.totalQuantity;
     });
 
     // input listener
     this.refs.inputvalue.addEventListener('input', () => {
       // return this.refs.inputvalue.value;
       this.totalQuantity = Number(this.refs.inputvalue.value);
-      console.log(this.totalQuantity);
+      // console.log(this.totalQuantity);
+      this.totalQuantity;
     });
+
+    return Number(this.refs.inputvalue.value);
   }
 
   getRefs(selector) {
@@ -58,7 +70,7 @@ class ProductsQuantity {
       return;
     }
     this._totalQuantity += 1;
-    this.refs.inputvalue.value = this._totalQuantity;
+    this.refs.inputvalue.value = Number(this._totalQuantity);
   }
 
   dec() {
@@ -69,7 +81,7 @@ class ProductsQuantity {
     this._totalQuantity -= 1;
     this._totalQuantity <= 0
       ? (this.refs.inputvalue.value = '')
-      : (this.refs.inputvalue.value = this.totalQuantity);
+      : (this.refs.inputvalue.value = Number(this._totalQuantity));
   }
 
   get totalQuantity() {
@@ -89,11 +101,91 @@ class ProductsQuantity {
   }
 }
 
-// const isecream = new ProductsQuantity('.quantity');
+// !-----------------------------
+// icecream
 const isecream = new ProductsQuantity('[data-quantity="icecream"]');
 
-console.log('isecream :>> ', isecream.totalQuantity);
-
-isecream.refs.inputvalue.addEventListener('change', () => {
-  console.log(isecream.refs.inputvalue.value);
+isecream.refs.inputvalue.addEventListener('input', () => {
+  // console.log('isecream :>> ', isecream.totalQuantity);
+  products.icecream.quantity = isecream.totalQuantity;
+  totalCost(products);
 });
+
+isecream.refs.incrisebutton.addEventListener('click', () => {
+  // console.log('isecream :>> ', isecream.totalQuantity);
+
+  products.icecream.quantity = isecream.totalQuantity;
+  // console.log('products :>> ', products);
+  totalCost(products);
+});
+
+isecream.refs.decrisebutton.addEventListener('click', () => {
+  // console.log('isecream :>> ', isecream.totalQuantity);
+  products.icecream.quantity = isecream.totalQuantity;
+  totalCost(products);
+});
+
+// !-----------------------------
+// icecoffee
+const icecoffee = new ProductsQuantity('[data-quantity="icecoffee"]');
+
+icecoffee.refs.inputvalue.addEventListener('input', () => {
+  // console.log('icecoffee :>> ', icecoffee.totalQuantity);
+  products.icecoffee.quantity = icecoffee.totalQuantity;
+  totalCost(products);
+});
+
+icecoffee.refs.incrisebutton.addEventListener('click', () => {
+  // console.log('icecoffee :>> ', icecoffee.totalQuantity);
+  products.icecoffee.quantity = icecoffee.totalQuantity;
+  totalCost(products);
+});
+
+icecoffee.refs.decrisebutton.addEventListener('click', () => {
+  // console.log('icecoffee :>> ', icecoffee.totalQuantity);
+  products.icecoffee.quantity = icecoffee.totalQuantity;
+  totalCost(products);
+});
+
+// !-----------------------------
+// milkshakes
+const milkshakes = new ProductsQuantity('[data-quantity="milkshakes"]');
+
+// console.log(milkshakes);
+
+milkshakes.refs.inputvalue.addEventListener('input', () => {
+  // console.log('milkshakes :>> ', milkshakes.totalQuantity);
+  products.milkshakes.quantity = milkshakes.totalQuantity;
+  totalCost(products);
+});
+
+milkshakes.refs.incrisebutton.addEventListener('click', () => {
+  // console.log('milkshakes :>> ', milkshakes.totalQuantity);
+  products.milkshakes.quantity = milkshakes.totalQuantity;
+  totalCost(products);
+});
+
+milkshakes.refs.decrisebutton.addEventListener('click', () => {
+  // console.log('milkshakes :>> ', milkshakes.totalQuantity);
+  products.milkshakes.quantity = milkshakes.totalQuantity;
+  totalCost(products);
+});
+
+function totalCost(products) {
+  // console.log(products);
+
+  let totalProdCost = 0;
+
+  for (const key in products) {
+    // console.log(key);
+    totalProdCost += products[key].price * products[key].quantity;
+    // console.log('total :>> ', totalProdCost);
+  }
+  markupPrice(refs.totalCost, totalProdCost);
+  return totalProdCost;
+}
+
+function markupPrice(element, total) {
+  element.innerHTML = `$${total}`;
+}
+

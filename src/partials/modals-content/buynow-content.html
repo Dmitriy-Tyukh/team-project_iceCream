@@ -67,7 +67,10 @@
           <div class="buynow-products__label">
             <span class="buynow-products__title">ice cream</span>
 
-            <span class="buynow-products__quantity quantity" data-quantity="icecream">
+            <span
+              class="buynow-products__quantity quantity"
+              data-quantity="icecream"
+            >
               <button
                 class="quantity__button quantity__button--rotated button-decrise"
                 type="button"
@@ -80,7 +83,7 @@
                 >
                   <use href="./images/svg/sprite.svg#icon-btn-arrow"></use>
                 </svg>
-              </button> 
+              </button>
               <input
                 class="form__input quantity__input"
                 type="number"
@@ -143,10 +146,14 @@
           <div class="buynow-products__label">
             <span class="buynow-products__title">ice coffee</span>
 
-            <span class="buynow-products__quantity quantity" data-quantity="icecoffee">
+            <span
+              class="buynow-products__quantity quantity"
+              data-quantity="icecoffee"
+            >
               <button
                 class="quantity__button quantity__button--rotated button-decrise"
                 type="button"
+                data-decriseButton
               >
                 <svg
                   class="quantity__svg decrise-btn__svg"
@@ -164,8 +171,13 @@
                 max="100"
                 placeholder="max 100"
                 tabindex="2"
+                data-inputValue
               />
-              <button class="quantity__button button-incrise" type="button">
+              <button
+                class="quantity__button button-incrise"
+                type="button"
+                data-incriseButton
+              >
                 <svg
                   class="quantity__svg incrise-btn__svg"
                   width="12"
@@ -213,9 +225,13 @@
           <div class="buynow-products__label">
             <span class="buynow-products__title">milkshakes</span>
 
-            <span class="buynow-products__quantity quantity" data-quantity="milkshakes">
+            <span
+              class="buynow-products__quantity quantity"
+              data-quantity="milkshakes"
+            >
               <button
                 class="quantity__button quantity__button--rotated button-decrise"
+                data-decriseButton
                 type="button"
               >
                 <svg
@@ -234,8 +250,13 @@
                 max="100"
                 placeholder="max 100"
                 tabindex="3"
+                data-inputValue
               />
-              <button class="quantity__button button-incrise" type="button">
+              <button
+                class="quantity__button button-incrise"
+                type="button"
+                data-incriseButton
+              >
                 <svg
                   class="quantity__svg incrise-btn__svg"
                   width="12"
