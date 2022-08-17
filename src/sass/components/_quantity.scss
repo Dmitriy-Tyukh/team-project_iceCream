@@ -26,8 +26,7 @@
 
   @include projTransitions('color, background-color');
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: var(--primary-text-color);
     background-color: var(--secondary-accent-color);
   }
@@ -50,4 +49,15 @@
 .quantity__input {
   // height: 40px;
   flex: 1 1 auto;
+
+  -moz-appearance: textfield;
+
+  /* Для Chrome */
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+  }
 }
