@@ -21,6 +21,8 @@ const products = {
   milkshakes: { price: 7, quantity: 0 },
 };
 
+// console.log('products start :>> ', products);
+
 // console.log('refs.form.elements :>> ', refs.form.elements);
 // console.log('refs.productQuantity :>> ', refs.productQuantity);
 // console.log('refs.incBtn :>> ', refs.incBtn);
@@ -35,7 +37,7 @@ class ProductsQuantity {
       this.inc();
       // return this.refs.inputvalue.value;
       // console.log(this.totalQuantity);
-      this.totalQuantity;
+      // this.totalQuantity;
     });
 
     // decrisebutton listener
@@ -44,7 +46,7 @@ class ProductsQuantity {
       // return this.refs.inputvalue.value;
 
       // console.log(this.totalQuantity);
-      this.totalQuantity;
+      // this.totalQuantity;
     });
 
     // input listener
@@ -52,7 +54,7 @@ class ProductsQuantity {
       // return this.refs.inputvalue.value;
       this.totalQuantity = Number(this.refs.inputvalue.value);
       // console.log(this.totalQuantity);
-      this.totalQuantity;
+      // this.totalQuantity;
     });
 
     return Number(this.refs.inputvalue.value);
@@ -120,10 +122,12 @@ isecream.refs.inputvalue.addEventListener('input', () => {
 
 isecream.refs.incrisebutton.addEventListener('click', () => {
   // console.log('isecream :>> ', isecream.totalQuantity);
+  // console.log(products);
 
   products.icecream.quantity = isecream.totalQuantity;
   // console.log('products :>> ', products);
   totalCost(products);
+  // console.log(products);
 });
 
 isecream.refs.decrisebutton.addEventListener('click', () => {
@@ -210,6 +214,20 @@ function onSubmit(e) {
     `Total cost ${totalCost(products)}`,
     `Dear mr(s). ${name.value}, your order has been sent to the address: ${adress.value}. Best regards 'Icecrem' team.`
   );
+
+  e.currentTarget.reset();
+  refs.totalCost.innerHTML = '$0';
+
+  products.icecoffee.quantity = 0;
+  products.icecream.quantity = 0;
+  products.milkshakes.quantity = 0;
+  isecream.totalQuantity = 0;
+  icecoffee.totalQuantity = 0;
+  isecream.totalQuantity = 0;
+  milkshakes.totalQuantity = 0;
+
+  // console.log(products);
+
   closeModal();
 }
 
