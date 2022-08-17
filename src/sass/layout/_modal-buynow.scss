@@ -275,8 +275,7 @@
   outline: none;
   width: 100%;
 
-  &:hover,
-  &:focus {
+  &:hover{
     color: var(--primary-text-color);
 
     background-color: var(--btn-text-color);

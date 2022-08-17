@@ -1,9 +1,16 @@
 import { debounce } from 'debounce';
 
+import Notiflix from 'notiflix';
+
 const refs = {
   form: document.querySelector('.form'),
   productQuantity: document.querySelectorAll('.quantity'),
   totalCost: document.getElementById('total-price'),
+
+  closeModalBtn: document.querySelector('[data-modal-close]'),
+  buttons: document.querySelectorAll('[data-button]'),
+  backdrop: document.querySelector('.backdrop'),
+  modalsContent: document.querySelectorAll('[data-modal]'),
 };
 
 let totalProdCost = 0;
@@ -189,3 +196,43 @@ function markupPrice(element, total) {
   element.innerHTML = `$${total}`;
 }
 
+refs.form.addEventListener('submit', onSubmit);
+
+function onSubmit(e) {
+  e.preventDefault();
+  // console.log(e.currentTarget);
+
+  const {
+    elements: { name, phone, email, adress },
+  } = e.currentTarget;
+  console.log(name.value);
+  Notiflix.Report.info(
+    `Total cost ${totalCost(products)}`,
+    `Dear mr(s). ${name.value}, your order has been sent to the address: ${adress.value}. Best regards 'Icecrem' team.`
+  );
+  closeModal();
+}
+
+function closeModal() {
+  document.body.classList.toggle('modal-open');
+  refs.backdrop.classList.toggle('is-hidden');
+  refs.modalsContent.forEach(el => {
+    if (!el.classList.contains('is-hidden')) {
+      el.classList?.toggle('is-hidden');
+    }
+    document.removeEventListener('keydown', closeModalByEscape);
+  });
+}
+
+function onBackdropClick(e) {
+  const isBackdrop = e.currentTarget === e.target;
+  if (isBackdrop) {
+    closeModal();
+  }
+}
+
+function closeModalByEscape(e) {
+  if (e.code === 'Escape') {
+    closeModal();
+  }
+}
